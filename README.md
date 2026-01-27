@@ -1,5 +1,5 @@
 <div align=center>
-  <h1>hello-rocm</h1>
+  <img src="./images/head.png" >
   <strong>AMD YES! 🚀</strong>
 </div>
 
@@ -40,12 +40,11 @@
 
 &emsp;&emsp;本项目适合以下学习者：
 
+
+* 手头有一张AMD显卡，想体验一下大模型本地运行;
 * 想要使用 AMD GPU 进行大模型开发，但找不到系统教程；
 * 希望低成本、高性价比地部署和运行大模型；
 * 对 ROCm 生态感兴趣，想要亲自上手实践；
-* AI 在学，希望拓展除 NVIDIA 之外的 GPU 平台知识；
-* 希望在 AMD 平台上打造领域特色的私域 LLM；
-* 以及最广大、最普通的学生群体。
 
 ## 项目规划及进展
 
