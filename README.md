@@ -55,19 +55,20 @@
     </td>
   </tr>
   <tr>
-    <td colspan="4" align="center" style="border: none !important;"><strong>Gemma4</strong></td>
+    <td colspan="2" align="center" style="border: none !important;"><strong>Gemma4</strong></td>
   </tr>
   <tr>
     <td valign="top" width="50%" style="border: none !important;">
-      • <a href="./01-Deploy/models/Qwen3/env-prepare-ubuntu24-rocm7.md">环境准备</a><br>
-      • <a href="./01-Deploy/models/Qwen3/lm-studio-rocm7-deploy.md">LM Studio部署</a><br>
-      • <a href="./01-Deploy/models/Qwen3/vllm-rocm7-deploy.md">vLLM部署</a><br>
-       • <a href="./01-Deploy/models/Qwen3/ollama-rocm7-deploy.md">Ollama部署</a><br>
-      • <a href="./01-Deploy/models/Qwen3/llamacpp-rocm7-deploy.md">llama.cpp部署</a><br>
+      • <a href="./01-Deploy/models/Gemma4/gemma4_model.md">Gemma 4 模型介绍</a><br>
+      • <a href="./01-Deploy/models/Gemma4/env-prepare-ubuntu24-rocm7.md">环境准备</a><br>
+      • <a href="./01-Deploy/models/Gemma4/lm-studio-rocm7-deploy.md">LM Studio部署</a><br>
+      • <a href="./01-Deploy/models/Gemma4/vllm-rocm7-deploy.md">vLLM部署</a><br>
+      • <a href="./01-Deploy/models/Gemma4/ollama-rocm7-deploy.md">Ollama部署</a><br>
+      • <a href="./01-Deploy/models/Gemma4/llamacpp-rocm7-deploy.md">llama.cpp部署</a><br>
     </td>
     <td valign="top" width="50%" style="border: none !important;">
-      • <a href="./02-Fine-tune/models/Qwen3/01-Qwen3-0.6B-LoRA及SwanLab可视化记录.md">Qwen3-0.6B LoRA微调</a><br>
-      • <a href="./02-Fine-tune/models/Qwen3/01-Qwen3-8B-LoRA.ipynb">Qwen3-8B LoRA微调</a><br>
+      • <a href="./02-Fine-tune/models/Gemma4/01-Gemma4-E4B-LoRA及SwanLab可视化记录.md">Gemma4-E4B LoRA微调（Markdown）</a><br>
+      • <a href="./02-Fine-tune/models/Gemma4/01-Gemma4-E4B-LoRA及SwanLab可视化记录.ipynb">Gemma4-E4B LoRA微调（Notebook）</a><br>
     </td>
   </tr>
 </table>
