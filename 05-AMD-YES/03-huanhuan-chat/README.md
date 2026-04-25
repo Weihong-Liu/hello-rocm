@@ -25,7 +25,7 @@ Chat-甄嬛，实现了以《甄嬛传》为切入点，打造一套基于小说
 
 ```
 ----------------
-windows 22.04
+Windows 11 / Ubuntu 24.04
 python 3.12
 rocm 7.12.0
 pytorch 2.9.1
@@ -81,11 +81,11 @@ pip install huggingface_hub
 
 ```
 [
-    {"rloe":"官员甲", "content":"咱们皇上可真是器重年将军和隆科多大人。"},
-    {"rloe":"官员乙", "content":"隆科多大人，恭喜恭喜啊！您可是国家的大功臣啊！"},
-    {"rloe":"官员丙", "content":"年大将军，皇上对你可是垂青有加呀！"},
-    {"rloe":"官员丁", "content":"年大人，您可是皇上的股肱之臣哪！"},
-    {"rloe":"苏培盛", "content":"年大将军请留步。大将军——"},
+    {"role":"官员甲", "content":"咱们皇上可真是器重年将军和隆科多大人。"},
+    {"role":"官员乙", "content":"隆科多大人，恭喜恭喜啊！您可是国家的大功臣啊！"},
+    {"role":"官员丙", "content":"年大将军，皇上对你可是垂青有加呀！"},
+    {"role":"官员丁", "content":"年大人，您可是皇上的股肱之臣哪！"},
+    {"role":"苏培盛", "content":"年大将军请留步。大将军——"},
     ...
 ]
 ```
@@ -183,7 +183,7 @@ import torch
 from peft import PeftModel
 
 mode_path = './LLM-Research/Meta-Llama-3___1-8B-Instruct'
-lora_path = './output/llama3_1_instruct_lora/checkpoint-699' # 这里改称你的 lora 输出对应 checkpoint 地址
+lora_path = './output/llama3_1_instruct_lora/checkpoint-699' # 这里改成你的 lora 输出对应 checkpoint 地址
 
 # 加载tokenizer
 tokenizer = AutoTokenizer.from_pretrained(mode_path, trust_remote_code=True)
@@ -193,7 +193,11 @@ model = AutoModelForCausalLM.from_pretrained(mode_path, device_map="auto",torch_
 
 # 加载lora权重
 model = PeftModel.from_pretrained(model, model_id=lora_path)
+```
 
+> **ROCm 说明**：在 ROCm 平台下，`device_map="auto"` 和 `.to('cuda')` 会自动映射到 AMD GPU，无需修改设备参数。PyTorch 的 `cuda` 接口在 ROCm 上原生兼容。
+
+```python
 prompt = "嬛嬛你怎么了，朕替你打抱不平！"
 
 messages = [

@@ -6,22 +6,45 @@
 
 </div>
 
-**Happy-LLM** 是一套完整的大语言模型（LLM）学习与实践教程，从零开始讲解大模型的核心原理和实现方法，包含模型结构设计、预训练、微调等全流程。本版本已适配 AMD ROCm 7.2.0+ 平台，支持 Linux 环境的多卡分布式训练。
+**Happy-LLM** 是一套完整的大语言模型（LLM）学习与实践教程，由 [Datawhale](https://github.com/datawhalechina) 社区发起，从零开始讲解大模型的核心原理和实现方法，包含模型结构设计、预训练、微调、应用等全流程。
 
-> Happy-LLM 原始项目地址：[*Link*](https://github.com/datawhalechina/happy-llm.git)
+> **🎯 本模块（AMD ROCm 版）仅包含原项目的第 5、6 章**，因为这两章涉及 GPU 实际训练，需要针对 AMD ROCm 平台做适配和优化。如果你尚未学习大模型基础理论，建议先阅读原项目的前 4 章（见下方原项目章节概览）。
 
-***本教程将从零开始，带领你手把手实现一个完整的大语言模型，深入理解 LLM 的原理与实践！***
+<br>
 
-## 简介
+***
 
-&emsp;&emsp;本模块基于 Happy-LLM 教程，针对 AMD GPU 和 ROCm 平台进行了优化和适配。它包含两个核心章节：
+## 原项目章节概览
 
-- **第五章：动手搭建大模型** - 从零开始实现 LLaMA2 模型的完整结构，包括 RMSNorm、Attention、FFN 等核心组件
-- **第六章：大模型训练流程实践** - 使用主流框架（Transformers、DeepSpeed）实现预训练和微调的完整流程
+Happy-LLM 完整教程共 7 章 + 1 个扩展篇，分为 **基础理论** 和 **实战应用** 两大部分：
 
-&emsp;&emsp;通过本教程，你将深入理解大模型的工作原理，掌握在 AMD GPU 上高效训练 LLM 的技能。
+### 📘 基础理论篇（第 1-4 章）
 
-## 章节导航
+> 以下章节为纯理论知识，不涉及 GPU 训练，可直接查看原项目学习，本模块未做修改。
+
+| 章节 | 内容 | 链接 |
+|------|------|------|
+| **第 1 章 — NLP 基础概念** | NLP 发展历程、任务分类、文本表示演进（从词袋到 Word2Vec） | [原项目第1章](https://github.com/datawhalechina/happy-llm/tree/main/docs/chapter1) |
+| **第 2 章 — Transformer 架构** | 注意力机制原理、Encoder-Decoder 结构、手把手搭建 Transformer | [原项目第2章](https://github.com/datawhalechina/happy-llm/tree/main/docs/chapter2) |
+| **第 3 章 — 预训练语言模型** | BERT / T5 / GPT 架构对比、预训练范式演进 | [原项目第3章](https://github.com/datawhalechina/happy-llm/tree/main/docs/chapter3) |
+| **第 4 章 — 大语言模型** | LLM 定义、训练策略（预训练 → SFT → RLHF）、涌现能力分析 | [原项目第4章](https://github.com/datawhalechina/happy-llm/tree/main/docs/chapter4) |
+
+### 🛠️ 实战应用篇（第 5-7 章）
+
+> 第 5、6 章已适配 AMD ROCm，可直接在本模块运行。第 7 章为通用应用知识，可在原项目查阅。
+
+| 章节 | 内容 | 本模块状态 |
+|------|------|:----------:|
+| **第 5 章 — 动手搭建大模型** 🟢 | 纯 PyTorch 从零实现 LLaMA2（8000万参数），完成预训练 + SFT 微调 | ✅ **ROCm 已适配** |
+| **第 6 章 — 大模型训练流程实践** 🟢 | 基于 Transformers + DeepSpeed 框架，复现工业级预训练与 SFT 流程 | ✅ **ROCm 已适配** |
+| **第 7 章 — 大模型应用** | 模型评测、RAG 检索增强生成、Agent 智能体 | [原项目第7章](https://github.com/datawhalechina/happy-llm/tree/main/docs/chapter7) |
+| **Extra Chapter — LLM Blog** | 社区贡献的优秀大模型学习笔记 | [扩展篇](https://github.com/datawhalechina/happy-llm/tree/main/Extra-Chapter) |
+
+> 💡 **学习路线建议**：如果你是大模型新手，建议按 1 → 2 → 3 → 4 → 5 → 6 的顺序学习。第 1-4 章在原项目阅读，第 5-6 章回本模块动手实践。有经验者可跳过前 4 章，直接进入第 5 章。
+
+<br>
+
+## 本模块章节导航
 
 ### 📚 第五章：动手搭建大模型
 

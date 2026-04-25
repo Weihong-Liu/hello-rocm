@@ -18,7 +18,7 @@ The base environment for this guide is as follows:
 
 ```
 ----------------
-windows 22.04
+Windows 11 / Ubuntu 24.04
 python 3.12
 rocm 7.12.0
 pytorch 2.9.1
@@ -51,7 +51,7 @@ ADB (Android Debug Bridge) is a command-line tool used for communicating with An
 
 **Installation on Windows:**
 
-1. Official Download: https://developer.android.google.cn/tools/releases/platform-tools?authuser=4&hl=zh-cn
+1. Official Download: https://developer.android.com/tools/releases/platform-tools
 2. After downloading and extracting, add the extracted path to the system environment variables
 
 <div align='center'>
@@ -269,7 +269,7 @@ jump.adb_tap(x, y, duration_ms=press_time)
 
 ### Notes
 
-⚠️ **Disclaimer**: This project is for learning and research purposes only. Using this tool may violate game terms of service. You bear the risk of using it.
+⚠️ **Disclaimer**: This project is for learning and research purposes only. Using this tool may violate game terms of service. Use at your own risk.
 
 ### Troubleshooting
 
@@ -297,3 +297,7 @@ adb start-server
 - Adjust the jump coefficient `k` value
 - Check the model detection results
 - Ensure the dataset quality is good enough
+
+---
+
+⭐ If this project helps you, please give it a star!

@@ -18,7 +18,7 @@
 
 ```
 ----------------
-windows 22.04
+Windows 11 / Ubuntu 24.04
 python 3.12
 rocm 7.12.0
 pytorch 2.9.1

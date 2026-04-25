@@ -21,6 +21,34 @@
 
 &emsp;&emsp;Through this tutorial, you will deeply understand how large language models work and master the skills to efficiently train LLMs on AMD GPUs.
 
+## Original Project Chapter Overview
+
+Happy-LLM's complete tutorial consists of 7 chapters + 1 extra chapter, divided into **Fundamentals** and **Hands-on Practice**:
+
+### 📘 Fundamentals (Chapters 1-4)
+
+> The following chapters cover theoretical knowledge without GPU training. You can study them directly from the original project; this module does not modify them.
+
+| Chapter | Content | Link |
+|---------|---------|------|
+| **Chapter 1 — NLP Fundamentals** | NLP development history, task classification, text representation evolution (from Bag-of-Words to Word2Vec) | [Original Chapter 1](https://github.com/datawhalechina/happy-llm/tree/main/docs/chapter1) |
+| **Chapter 2 — Transformer Architecture** | Attention mechanism principles, Encoder-Decoder structure, step-by-step Transformer implementation | [Original Chapter 2](https://github.com/datawhalechina/happy-llm/tree/main/docs/chapter2) |
+| **Chapter 3 — Pre-trained Language Models** | BERT / T5 / GPT architecture comparison, pre-training paradigm evolution | [Original Chapter 3](https://github.com/datawhalechina/happy-llm/tree/main/docs/chapter3) |
+| **Chapter 4 — Large Language Models** | LLM definition, training strategies (Pre-training → SFT → RLHF), emergent abilities analysis | [Original Chapter 4](https://github.com/datawhalechina/happy-llm/tree/main/docs/chapter4) |
+
+### 🛠️ Hands-on Practice (Chapters 5-7)
+
+> Chapters 5 and 6 have been adapted for AMD ROCm and can be run directly in this module. Chapter 7 covers general application knowledge and can be found in the original project.
+
+| Chapter | Content | This Module Status |
+|---------|---------|:------------------:|
+| **Chapter 5 — Building LLMs from Scratch** 🟢 | Pure PyTorch implementation of LLaMA2 (80M parameters), pre-training + SFT fine-tuning | ✅ **ROCm Adapted** |
+| **Chapter 6 — LLM Training Workflow Practice** 🟢 | Transformers + DeepSpeed framework, production-grade pre-training and SFT workflow | ✅ **ROCm Adapted** |
+| **Chapter 7 — LLM Applications** | Model evaluation, RAG retrieval-augmented generation, Agent | [Original Chapter 7](https://github.com/datawhalechina/happy-llm/tree/main/docs/chapter7) |
+| **Extra Chapter — LLM Blog** | Community-contributed excellent LLM learning notes | [Extra Chapter](https://github.com/datawhalechina/happy-llm/tree/main/Extra-Chapter) |
+
+> 💡 **Learning Path Recommendation**: If you are new to LLMs, we recommend following the order 1 → 2 → 3 → 4 → 5 → 6. Read chapters 1-4 in the original project, then return to this module for hands-on work with chapters 5-6. Experienced developers can skip chapters 1-4 and proceed directly to chapter 5.
+
 ## Chapter Navigation
 
 ### 📚 Chapter 5: Building Large Language Models from Scratch
@@ -33,7 +61,7 @@ Implement the LLaMA2 model with 80 million parameters entirely in pure PyTorch f
 
 ### 🔧 Chapter 6: Large Language Model Training Workflow in Practice
 
-Based on the Transformers + DeepSpeed framework, reproduce industry-grade pre-training and SFT workflows with support for AMD ROCm multi-card distributed training and ZeRO optimization.
+Based on the Transformers + DeepSpeed framework, reproduce production-grade pre-training and SFT workflows with support for AMD ROCm multi-card distributed training and ZeRO optimization.
 
 📖 [Chapter Tutorial](./chapter6/chapter6-llm-training-workflow-practice.md) ｜ 🚀 [Execution Process and Script Instructions](./chapter6/README_EN.md)
 
@@ -225,7 +253,7 @@ For detailed running guides, see the documentation for each chapter.
 
 **A:** 
 - **Chapter 5**: Pure PyTorch implementation, building LLaMA2 from scratch, suitable for understanding model principles
-- **Chapter 6**: Using the Transformers framework, focusing on industry-grade training and optimization, suitable for practical applications
+- **Chapter 6**: Using the Transformers framework, focusing on production-grade training and optimization, suitable for practical applications
 
 If you want to get started training quickly, you can go directly to Chapter 6. If you want to deeply understand model principles, it is recommended to complete Chapter 5 first.
 
