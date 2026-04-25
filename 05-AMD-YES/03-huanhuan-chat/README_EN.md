@@ -25,7 +25,7 @@ The basic environment for this article is as follows:
 
 ```
 ----------------
-Windows 22.04
+Windows 11 / Ubuntu 24.04
 Python 3.12
 ROCm 7.12.0
 PyTorch 2.9.1
@@ -59,7 +59,7 @@ pip install huggingface_hub
 
 ## Step 2: Data Preparation
 
-First, we need to prepare the script data for "Zhenxuan's Tale". Here we use the script data from "Zhenxuan's Tale". Let's look at the format of the original data.
+First, we need to prepare the script data for *Zhenxuan's Tale*. Here we use the script data from the series. Let's look at the format of the original data.
 
 ```text
 Scene 2
@@ -141,7 +141,7 @@ So the general approach for processing data in this step is:
 
 ***1. Extract characters and dialogues from raw data &emsp;2. Filter for the dialogues of the character we care about &emsp;3. Convert dialogues into the format we need***
 
-> *This step can also include a data augmentation phase, such as providing two to three data samples to an LLM and having it generate similarly-styled data. Alternatively, you can find some daily conversation datasets and use RAG to generate dialogue data in a fixed character style. Here you can boldly try whatever approaches you want!*
+> *This step can also include a data augmentation phase, such as providing two or three data samples to an LLM and having it generate similarly-styled data. Alternatively, you can find some daily conversation datasets and use RAG to generate dialogue data in a fixed character style. Here you can boldly try whatever approaches you want!*
 
 ## Step 3: Model Training
 
@@ -193,7 +193,11 @@ model = AutoModelForCausalLM.from_pretrained(mode_path, device_map="auto",torch_
 
 # Load LoRA weights
 model = PeftModel.from_pretrained(model, model_id=lora_path)
+```
 
+> **ROCm Note**: On the ROCm platform, `device_map="auto"` and `.to('cuda')` will automatically map to AMD GPUs without requiring any parameter modifications. PyTorch's `cuda` interface is natively compatible on ROCm.
+
+```python
 prompt = "Zhenxuan, what's wrong? Let me take up this matter for you!"
 
 messages = [

@@ -74,13 +74,13 @@
 
 #### ✈️ 智能旅行规划助手
 
-[智能旅行规划助手](./05-hello-agents/智能旅行规划助手简易实战/README.md) 是基于 HelloAgents 框架的智能 Agent 应用，集成 MCP 协议调用高德地图 API，在 AMD GPU 上本地运行大模型。
+[智能旅行规划助手](./05-hello-agents/README.md) 是基于 HelloAgents 框架的智能 Agent 应用，集成 MCP 协议调用高德地图 API，在 AMD GPU 上本地运行大模型。
 
 - **适合人群**：想学习 Agent 框架和 MCP 协议的开发者
 - **难度等级**：⭐⭐⭐
 - **预计时间**：2 小时
 
-📖 [开始学习智能旅行规划助手](./05-hello-agents/智能旅行规划助手简易实战/AMD395×HelloAgents实战：智能旅行规划助手.md)
+📖 [开始学习智能旅行规划助手](./05-hello-agents/smart-travel-planner/docs/amd395-helloagents-smart-travel-planner-zh.md)
 
 ---
 
