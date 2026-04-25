@@ -1,0 +1,35 @@
+{
+  "name": "hello-rocm",
+  "version": "0.1.0",
+  "description": "hello-rocm 项目导航技能 — 帮助用户在 AMD GPU 上使用 ROCm 部署、微调、优化大语言模型",
+  "description_en": "Navigation skill for the hello-rocm tutorial project — helps users deploy, fine-tune, and optimize LLMs on AMD GPUs with ROCm.",
+  "keywords": ["ROCm", "AMD", "GPU", "LLM", "AI", "deploy", "fine-tune", "HIP", "tutorial", "Radeon", "Instinct", "Ryzen AI"],
+  "personas": [
+    {
+      "id": "new_owner",
+      "label": "刚买了 AMD 设备",
+      "label_en": "New AMD Device Owner",
+      "signals": ["刚买", "新电脑", "第一次", "安装 ROCm", "LM Studio", "我的 GPU", "beginner", "just bought", "first time", "install"],
+      "path": ["04-References (硬件兼容)", "01-Deploy/env-prepare (环境安装)", "01-Deploy/LM Studio (首个模型)"]
+    },
+    {
+      "id": "ai_learner",
+      "label": "想用 AMD 做 AI 学习",
+      "label_en": "AI Learner",
+      "signals": ["微调", "LoRA", "训练", "数据集", "SFT", "实战", "toy-cli", "fine-tune", "train", "practice"],
+      "path": ["01-Deploy (基础部署)", "02-Fine-tune (微调入门)", "05-AMD-YES (实战项目)"]
+    },
+    {
+      "id": "developer",
+      "label": "有编程基础要用 ROCm 做 AI",
+      "label_en": "Experienced Developer",
+      "signals": ["HIP", "kernel", "CUDA 迁移", "性能", "架构", "vLLM", "自定义算子", "profile", "production", "migrate"],
+      "path": ["03-Infra (架构与编程)", "01-Deploy/vLLM (生产部署)", "04-References (官方文档)"]
+    }
+  ],
+  "capabilities": {
+    "tools": ["Read", "Bash"],
+    "requires_project": true,
+    "project_path": "hello-rocm"
+  }
+}
