@@ -1,11 +1,11 @@
 <div align=center>
   <h1>03-Infra</h1>
-  <strong>⚙️ ROCm 算子优化实践</strong>
+  <strong>⚙️ ROCm 基础设施与算力编程</strong>
 </div>
 
 <div align="center">
 
-*CUDA 到 ROCm 的迁移与优化指南*
+*从 AMD AI 硬件全景到 HIP 算子与性能分析*
 
 [返回主页](../README.md)
 
@@ -13,95 +13,66 @@
 
 ## 简介
 
-&emsp;&emsp;本模块专注于 ROCm 基础设施和算子优化，帮助开发者将 CUDA 代码迁移到 ROCm 平台，并掌握 AMD GPU 上的性能优化技巧。
+&emsp;&emsp;本模块面向希望在 **AMD GPU + ROCm** 上建立系统认知的开发者：从 AI 硬件与 ROCm 软件栈全景，到 PyTorch 调用链与 GPU 架构，再到用 **HIP** 手写算子、结合 **rocBLAS / MIOpen** 与性能测量，把「基础设施」讲清楚、练到位。
 
-&emsp;&emsp;随着 AMD GPU 在 AI 领域的崛起，越来越多的开发者需要将现有的 CUDA 代码迁移到 ROCm 平台。本模块提供系统的迁移指南和优化实践，帮助你充分发挥 AMD GPU 的性能潜力。
+&emsp;&emsp;内容与仓库内 **第 1～4 章** 连载教程一一对应，默认实验环境为 **Ubuntu 22.04 / 24.04 + ROCm 7.x**，示例设备以 **AMD AI+ MAX395 / Radeon 8060S（gfx1151）** 等为主，读者可按自身显卡与 ROCm 版本对照阅读。目录结构如下：
+
+```
+03-Infra/
+├── 第1章-拥抱AMD-AI算力新时代.md
+├── 第2章-解密AI加速器-从软件栈到硬件架构.md
+├── 第 3 章：迈入 ROCm 编程世界——手写一个“PyTorch 算子”.md
+├── 第 4 章：迈入 ROCm 编程世界——手写一个“PyTorch 算子”.md
+└── images/                    # 章节配图与实验截图
+```
 
 ## 教程列表
 
-### HIPify 自动化迁移实战
+### 第 1 章：拥抱 AMD AI 算力新时代
 
-&emsp;&emsp;HIPify 是 AMD 提供的自动化工具，可以将 CUDA 代码自动转换为 HIP 代码（ROCm 的编程接口）。本教程将指导你如何使用 HIPify 完成代码迁移。
+&emsp;&emsp;从 Ryzen AI（NPU + GPU）、Radeon 独显到 Instinct 数据中心加速卡，梳理 AMD AI 产品线与典型应用场景；说明 **ROCm** 在栈中的位置，并配合 **PyTorch** 完成 ResNet 训练与 Qwen 等大模型推理等动手实验，建立「能在 AMD 上跑什么」的整体图景。
 
-- **适合人群**：有 CUDA 开发经验、需要迁移代码的开发者
-- **难度等级**：⭐⭐⭐
-- **预计时间**：2 小时
+- **适合人群**：初次接触 AMD AI / ROCm 的开发者与学生
+- **难度等级**：⭐⭐
+- **预计时间**：2～3 小时
 
-**核心内容：**
-- HIPify 工具安装与配置
-- 自动转换 CUDA 代码
-- 手动调整与兼容性处理
-- 迁移后的验证与测试
-
-📖 [开始学习 HIPify 迁移教程](./HIPify/README.md)
+📖 [阅读第 1 章](./第1章-拥抱AMD-AI算力新时代.md)
 
 ---
 
-### BLAS 与 DNN 的无缝切换
+### 第 2 章：解密 AI 加速器——从软件栈到硬件架构
 
-&emsp;&emsp;本教程介绍如何将 cuBLAS/cuDNN 代码迁移到 rocBLAS/MIOpen，实现基础数学库和深度学习库的无缝切换。
+&emsp;&emsp;用 `ldd` 等工具追踪 **PyTorch → HIP → HSA → 驱动 → GPU** 的调用链路，理解 CPU「低延迟」与 GPU「高吞吐」、**SIMT** 执行模型；结合 **CU、LDS、显存带宽** 等概念，读懂 AMD GPU 在 AI 负载下的行为方式。
 
-- **适合人群**：使用底层数学库的开发者
+- **适合人群**：已能跑通模型、希望理解底层栈与硬件的开发者
 - **难度等级**：⭐⭐⭐
-- **预计时间**：1.5 小时
+- **预计时间**：3～4 小时
 
-**核心内容：**
-
-| CUDA | ROCm | 说明 |
-|------|------|------|
-| cuBLAS | rocBLAS | 基础线性代数库 |
-| cuDNN | MIOpen | 深度学习原语库 |
-| cuFFT | rocFFT | 快速傅里叶变换 |
-| cuSPARSE | rocSPARSE | 稀疏矩阵库 |
-
-- API 对照与转换
-- 性能调优技巧
-- 常见问题解决
-
-📖 [开始学习 BLAS/DNN 迁移教程](./BLAS-DNN/README.md)
+📖 [阅读第 2 章](./第2章-解密AI加速器-从软件栈到硬件架构.md)
 
 ---
 
-### NCCL 到 RCCL 的迁移
+### 第 3 章：迈入 ROCm 编程世界——手写一个「PyTorch 算子」
 
-&emsp;&emsp;RCCL（ROCm Communication Collectives Library）是 AMD 版本的集合通信库，用于多 GPU 分布式训练。本教程介绍如何从 NCCL 迁移到 RCCL。
+&emsp;&emsp;介绍 **HIP** 与 CUDA 的对应关系、Host/Device 代码结构；从 **手写 Kernel** 复现 Tensor 加法，到使用 **`hipEvent`** 做计时，并初步接触 **rocBLAS** 与 **MIOpen**，完成从 Python 到设备端代码的过渡。
 
-- **适合人群**：进行多 GPU 分布式开发的开发者
-- **难度等级**：⭐⭐⭐⭐
-- **预计时间**：2 小时
+- **适合人群**：具备 C++ 基础、准备编写或阅读自定义算子的开发者
+- **难度等级**：⭐⭐⭐
+- **预计时间**：2～3 小时
 
-**核心内容：**
-- RCCL 安装与环境配置
-- NCCL API 到 RCCL 的映射
-- 多节点通信配置
-- 分布式训练集成
-
-📖 [开始学习 RCCL 迁移教程](./RCCL/README.md)
+📖 [阅读第 3 章](<./第 3 章：迈入 ROCm 编程世界——手写一个“PyTorch 算子”.md>)
 
 ---
 
-### Nsight 到 Rocprof 的映射
+### 第 4 章：迈入 ROCm 编程世界——手写一个「PyTorch 算子」（深化）
 
-&emsp;&emsp;性能分析是优化的基础。本教程介绍如何使用 ROCm 的性能分析工具替代 NVIDIA Nsight 系列工具。
+&emsp;&emsp;在上一章基础上强化 **软硬件映射**（Thread / Wavefront / Work-Group 与 AMD 硬件对应）、**Profiling** 与 **rocBLAS GEMM** 实战（含算力利用率等），更贴近「算子开发与性能分析」工作流。
 
-- **适合人群**：需要进行性能调优的开发者
+- **适合人群**：希望系统掌握 HIP 写法与性能测量、并对接数学库的开发者
 - **难度等级**：⭐⭐⭐
-- **预计时间**：1.5 小时
+- **预计时间**：2～3 小时
 
-**核心内容：**
-
-| NVIDIA 工具 | ROCm 工具 | 用途 |
-|-------------|-----------|------|
-| Nsight Systems | rocprof | 系统级性能分析 |
-| Nsight Compute | rocprof --stats | 内核级性能分析 |
-| nvprof | rocprof | 命令行分析工具 |
-| Nsight Graphics | ROCm Debugger | 图形调试 |
-
-- 性能数据采集
-- 热点分析与优化
-- 可视化工具使用
-
-📖 [开始学习 Rocprof 使用教程](./Rocprof/README.md)
+📖 [阅读第 4 章](<./第 4 章：迈入 ROCm 编程世界——手写一个“PyTorch 算子”.md>)
 
 ---
 
@@ -109,69 +80,38 @@
 
 ### 硬件要求
 
-- AMD GPU（支持 ROCm）
-- 建议使用 MI 系列或 RX 7000 系列
+- AMD GPU（支持 ROCm 的显卡，如 RX 7000 / 9000 系列、Ryzen AI MAX / AI 300、Instinct MI 系列等）
+- 各章实验对显存要求不同：第 1 章涉及 ResNet / 大模型推理时请预留足够显存；第 3、4 章以小型 HIP 程序与矩阵实验为主，一般消费级显卡即可
 
 ### 软件要求
 
-- 操作系统：Linux (Ubuntu 22.04+)
-- ROCm 7.10.0 或更高版本
-- CMake 3.16+
-- GCC 9+ 或 Clang 12+
-
-## 快速开始
-
-```bash
-# 1. 安装 ROCm 开发工具
-sudo apt install rocm-dev hip-dev
-
-# 2. 验证 HIP 环境
-hipcc --version
-
-# 3. 编译简单的 HIP 程序
-hipcc hello_hip.cpp -o hello_hip
-./hello_hip
-```
-
-## CUDA 与 HIP 快速对照
-
-```cpp
-// CUDA 代码
-cudaMalloc(&d_ptr, size);
-cudaMemcpy(d_ptr, h_ptr, size, cudaMemcpyHostToDevice);
-kernel<<<grid, block>>>(d_ptr);
-cudaFree(d_ptr);
-
-// HIP 代码（几乎相同！）
-hipMalloc(&d_ptr, size);
-hipMemcpy(d_ptr, h_ptr, size, hipMemcpyHostToDevice);
-hipLaunchKernelGGL(kernel, grid, block, 0, 0, d_ptr);
-hipFree(d_ptr);
-```
+- 操作系统：Linux（Ubuntu 22.04+，教程正文以 22.04 / 24.04 为例）
+- ROCm 7.10.0 或更高版本（章节内亦可能出现 7.x 表述，以你本机 `rocm-smi` / 发行说明为准）
+- 第 1 章：Python 3.10+、PyTorch（ROCm 构建版）
+- 第 3、4 章：建议安装 **ROCm HIP 开发组件**（如 `hipcc`、`rocm-dev` 等，随发行版包名可能略有差异）、CMake 3.16+、GCC 9+ 或 Clang 12+
 
 ## 常见问题
 
 <details>
-<summary>Q: HIPify 转换后的代码能否在 NVIDIA GPU 上运行？</summary>
+<summary>Q: 如何确认我的 AMD GPU 是否支持 ROCm？</summary>
 
-是的！HIP 代码具有跨平台特性，可以通过条件编译同时支持 AMD 和 NVIDIA GPU。
-
-</details>
-
-<details>
-<summary>Q: ROCm 支持哪些 CUDA 版本的 API？</summary>
-
-ROCm 的 HIP 接口兼容大部分 CUDA Runtime API，具体兼容性请参考 [HIP API 文档](https://rocm.docs.amd.com/projects/HIP/en/latest/)。
+请参考 [ROCm 官方支持列表](https://rocm.docs.amd.com/projects/install-on-linux/en/latest/reference/system-requirements.html) 查看支持的 GPU 型号与发行版组合。
 
 </details>
 
 <details>
-<summary>Q: 迁移后性能下降怎么办？</summary>
+<summary>Q: 第 3、4 章与第 1、2 章是什么关系？</summary>
 
-1. 使用 rocprof 进行性能分析
-2. 检查内存访问模式是否适合 AMD GPU 架构
-3. 调整 workgroup size 和 wavefront 配置
-4. 查阅 AMD GPU 架构优化指南
+第 1、2 章侧重**全景与栈/硬件认知**；第 3、4 章侧重**HIP 编程与算子级实践**。两章标题相近：可先读第 3 章建立最小闭环，再读第 4 章做映射与性能深化；若时间有限，也可按个人基础选读其中一章。
+
+</details>
+
+<details>
+<summary>Q: 编译 HIP 程序时提示找不到头文件或链接库？</summary>
+
+1. 确认已安装对应版本的 ROCm 开发包，且 `hipcc` 在 `PATH` 中  
+2. 检查 `HIP_PATH`、`ROCM_PATH` 等环境变量是否与安装路径一致  
+3. 参考 [HIP 安装与入门](https://rocm.docs.amd.com/projects/HIP/en/latest/) 核对依赖
 
 </details>
 
@@ -181,13 +121,13 @@ ROCm 的 HIP 接口兼容大部分 CUDA Runtime API，具体兼容性请参考 [
 - [HIP 编程指南](https://rocm.docs.amd.com/projects/HIP/en/latest/)
 - [rocBLAS 文档](https://rocm.docs.amd.com/projects/rocBLAS/en/latest/)
 - [MIOpen 文档](https://rocm.docs.amd.com/projects/MIOpen/en/latest/)
-- [RCCL 文档](https://rocm.docs.amd.com/projects/rccl/en/latest/)
+- [PyTorch for ROCm](https://pytorch.org/get-started/locally/)
 
 ---
 
 <div align="center">
 
-**欢迎贡献更多 Infra 教程！** 🎉
+**欢迎贡献更多 Infra 与算子实践内容！** 🎉
 
 [提交 Issue](https://github.com/datawhalechina/hello-rocm/issues) | [提交 PR](https://github.com/datawhalechina/hello-rocm/pulls)
 
