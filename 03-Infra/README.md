@@ -34,7 +34,7 @@
 │   ├── README.md
 │   ├── code/
 │   └── images/
-└── images/                    # 章节配图与实验截图
+└── README.md
 ```
 
 ## 教程列表
@@ -47,7 +47,7 @@
 - **难度等级**：⭐⭐
 - **预计时间**：2～3 小时
 
-📖 [阅读第 1 章](./01-embrace-amd-ai/)
+📖 [阅读第 1 章](./01-embrace-amd-ai/README.md)
 
 ---
 
@@ -59,7 +59,7 @@
 - **难度等级**：⭐⭐⭐
 - **预计时间**：3～4 小时
 
-📖 [阅读第 2 章](./02-decode-ai-accelerator/)
+📖 [阅读第 2 章](./02-decode-ai-accelerator/README.md)
 
 ---
 
@@ -71,7 +71,7 @@
 - **难度等级**：⭐⭐⭐
 - **预计时间**：2～3 小时
 
-📖 [阅读第 3 章](./03-handwrite-rocm-operator/)
+📖 [阅读第 3 章](./03-handwrite-rocm-operator/README.md)
 
 ---
 
@@ -83,7 +83,7 @@
 - **难度等级**：⭐⭐⭐⭐
 - **预计时间**：3～4 小时
 
-📖 [阅读第 4 章](./04-custom-pytorch-operator/)
+📖 [阅读第 4 章](./04-custom-pytorch-operator/README.md)
 
 ---
 
