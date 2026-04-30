@@ -138,6 +138,11 @@ celerybeat.pid
 .env
 .envrc
 .venv
+.venv-docs-readme/
+# docs-readme：本地密钥与脚本（按需忽略，勿提交 .env）
+docs-readme/.env
+docs-readme/.env.example
+docs-readme/tools/
 env/
 venv/
 ENV/

@@ -1,11 +1,11 @@
 <div align=center>
-  <img src="../../images/head.png" alt="hello-rocm">
+  <img src="../../images/head.png" >
   <strong>AMD YES! 🚀</strong>
 </div>
 
 <div align="center">
 
-*مفتوح المصدر · مدفوع بالمجتمع · جعل منظومة AMD AI أسهل*
+*مفتوح المصدر · بقيادة المجتمع · جعل نظام AMD البيئي للذكاء الاصطناعي أكثر سهولة*
 
 <p align="center">
   <a href="../../README_en.md"><img alt="English" src="https://img.shields.io/badge/English-d9d9d9"></a>
@@ -15,44 +15,268 @@
   <a href="../es-ES/README.md"><img alt="Español" src="https://img.shields.io/badge/Español-d9d9d9"></a>
   <a href="../fr-FR/README.md"><img alt="Français" src="https://img.shields.io/badge/Français-d9d9d9"></a>
   <a href="../ko-KR/README.md"><img alt="한국어" src="https://img.shields.io/badge/한국어-d9d9d9"></a>
-  <a href="./README.md"><img alt="العربية" src="https://img.shields.io/badge/العربية-d9d9d9"></a>
+  <a href="README.md"><img alt="العربية" src="https://img.shields.io/badge/العربية-d9d9d9"></a>
   <a href="../vi-VN/README.md"><img alt="Tiếng_Việt" src="https://img.shields.io/badge/Tiếng_Việt-d9d9d9"></a>
   <a href="../de-DE/README.md"><img alt="Deutsch" src="https://img.shields.io/badge/Deutsch-d9d9d9"></a>
 </p>
 
 </div>
 
-## ما هو hello-rocm؟
+&emsp;&emsp;منذ **ROCm 7.10.0** (الذي صدر في 11 ديسمبر 2025)، يمكن تثبيت ROCm بسلاسة في البيئات الافتراضية Python تمامًا مثل CUDA، مع دعم رسمي لكل من **Linux وWindows**. هذه خطوة كبيرة من AMD في مجال الذكاء الاصطناعي: لم يعد المتعلمون وعشاق LLM مقيدين بأجهزة NVIDIA—بطاقات AMD GPU أصبحت خيارًا قويًا وعمليًا.
 
-&emsp;&emsp;**hello-rocm** مجموعة دروس لتشغيل وضبط **نماذج لغوية كبيرة على معالجات AMD الرسومية باستخدام ROCm**: بيئة موحدة، نشر، ضبط دقيق، ومواضيع البنية التحتية/المعاملات.
+&emsp;&emsp;التزمت AMD بدورة إصدار ROCm مدتها **حوالي ستة أسابيع** مع تركيز قوي على الذكاء الاصطناعي. خارطة الطريق مثيرة.
 
-&emsp;&emsp;ابتداءً من **ROCm 7.10.0**، يمكن تثبيت ROCm في بيئات Python الافتراضية بشكل يشبه CUDA، مع دعم رسمي لـ **Linux وWindows**.
+&emsp;&emsp;لا تزال هناك نقص في الدروس المنهجية على مستوى العالم حول استدلال LLM ونشره وتدريبه وضبطه الدقيق وموضوعات البنية التحتية باستخدام ROCm. مشروع **hello-rocm** موجود لسد هذه الفجوة.
 
-## مسار التعلم المقترح
+&emsp;&emsp;**هذا المشروع هو في الأساس دروس تعليمية** حتى يتمكن الطلاب والممارسون المستقبليون من تعلم AMD ROCm بطريقة منظمة. **نرحب بأي شخص لفتح مشكلات أو تقديم طلبات سحب** للمساهمة في نمو المشروع وصيانته معًا.
 
-1. **[00-Environment](../../00-Environment/README.md)** — خط أساس ROCm + PyTorch + **uv**  
-2. **01-Deploy** — LM Studio وvLLM وOllama وllama.cpp وغيرها  
-3. **02-Fine-tune** — أمثلة LoRA  
-4. **03-Infra** — HIP والمكدس والممارسات على مستوى النواة  
+> &emsp;&emsp;***مسار التعلم: أكمل [00-Environment](../../00-Environment/README_EN.md) أولاً (ROCm + PyTorch + **uv**)، ثم النشر والضبط الدقيق، وأخيرًا موضوعات Infra / مستوى المشغل. بعد أن تعمل بيئتك، يعد LM Studio أو vLLM نقطة بداية جيدة.***
 
-## أين التوثيق الكامل؟
+### آخر التحديثات
 
-| اللغة | الملف |
-|:---|:---|
-| الصينية المبسطة (الرئيسي) | **[README.md](../../README.md)** في جذر المستودع |
-| الإنجليزية | **[README_en.md](../../README_en.md)** |
+- *2026.3.11:* [*ملاحظات إصدار ROCm 7.12.0*](https://rocm.docs.amd.com/en/7.12.0-preview/index.html)
 
-## هيكل المستودع (ملخص)
+- *2025.12.11:* [*ملاحظات إصدار ROCm 7.10.0*](https://rocm.docs.amd.com/en/7.10.0-preview/about/release-notes.html)
 
-| المسار | المحتوى |
-|:---|:---|
-| [00-Environment](../../00-Environment/) | تثبيت ROCm (Windows / Ubuntu) |
-| [01-Deploy](../../01-Deploy/) | نشر LLM |
-| [02-Fine-tune](../../02-Fine-tune/) | الضبط الدقيق |
-| [03-Infra](../../03-Infra/) | البنية والمعاملات |
-| [04-References](../../04-References/) | مراجع |
-| [05-AMD-YES](../../05-AMD-YES/) | أمثلة المجتمع |
+### النماذج والدروس المدعومة
+
+<p align="center">
+  <strong>✨ نماذج LLM الرئيسية: البيئة · الاستدلال متعدد الأطر · الضبط الدقيق ✨</strong><br>
+  <em>إعداد ROCm الموحد (Windows / Ubuntu) + ROCm 7+ · دروس لكل نموذج (قيد النمو)</em><br>
+ <a href="../../00-Environment/README_EN.md">00 — إعداد البيئة</a>
+</p>
+
+<table align="center" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border: none !important;">
+
+  <tr>
+    <td colspan="2" align="center" style="border: none !important;"><strong>Qwen3</strong></td>
+  </tr>
+  <tr>
+    <td valign="top" width="50%" style="border: none !important;">
+      • <a href="../../01-Deploy/models/Qwen3/lm-studio-rocm7-deploy.md">LM Studio</a><br>
+      • <a href="../../01-Deploy/models/Qwen3/vllm-rocm7-deploy.md">vLLM</a><br>
+      • <a href="../../01-Deploy/models/Qwen3/ollama-rocm7-deploy.md">Ollama</a><br>
+      • <a href="../../01-Deploy/models/Qwen3/llamacpp-rocm7-deploy.md">llama.cpp</a><br>
+    </td>
+    <td valign="top" width="50%" style="border: none !important;">
+      • <a href="../../02-Fine-tune/models/Qwen3/01-Qwen3-0.6B-LoRA及SwanLab可视化记录.md">Qwen3-0.6B LoRA + SwanLab</a><br>
+      • <a href="../../02-Fine-tune/models/Qwen3/01-Qwen3-8B-LoRA.ipynb">Qwen3-8B LoRA (دفتر)</a><br>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center" style="border: none !important;"><strong>Gemma4</strong></td>
+  </tr>
+  <tr>
+    <td valign="top" width="50%" style="border: none !important;">
+      • <a href="../../01-Deploy/models/Gemma4/gemma4_model.md">نظرة عامة على نموذج Gemma 4</a><br>
+      • <a href="../../01-Deploy/models/Gemma4/lm-studio-rocm7-deploy.md">LM Studio</a><br>
+      • <a href="../../01-Deploy/models/Gemma4/vllm-rocm7-deploy.md">vLLM</a><br>
+      • <a href="../../01-Deploy/models/Gemma4/ollama-rocm7-deploy.md">Ollama</a><br>
+      • <a href="../../01-Deploy/models/Gemma4/llamacpp-rocm7-deploy.md">llama.cpp</a><br>
+    </td>
+    <td valign="top" width="50%" style="border: none !important;">
+      • <a href="../../02-Fine-tune/models/Gemma4/01-Gemma4-E4B-LoRA及SwanLab可视化记录.ipynb">الضبط الدقيق LoRA لنموذج Gemma4 E4B (TRL، دفتر)</a><br>
+    </td>
+  </tr>
+</table>
+
+## لماذا هذا المشروع
+
+&emsp;&emsp;ما هو ROCm؟
+
+> ROCm (Radeon Open Compute) هي مجموعة الحوسبة المفتوحة لوحدات معالجة الرسوميات من AMD للحوسبة عالية الأداء والتعلم الآلي. تتيح لك تشغيل أعباء العمل المتوازية على وحدات معالجة الرسوميات AMD وهي المسار البديل الرئيسي لـ CUDA على أجهزة AMD.
+
+&emsp;&emsp;نماذج LLM المفتوحة في كل مكان، ومع ذلك تفترض معظم الدروس والأدوات مجموعة NVIDIA CUDA. غالبًا ما يفتقر المطورون الذين يختارون AMD إلى مواد تعليمية شاملة وموجهة لـ ROCm.
+&emsp;&emsp;اعتبارًا من **ROCm 7.10.0** (11 ديسمبر 2025)، يعمل مشروع **TheRock** من AMD على فصل بيئة التشغيل الحاسوبية عن نظام التشغيل، مما يسمح لواجهات ROCm نفسها بالعمل على **لينكس وويندوز**، ويمكن تثبيت ROCm في بيئات بايثون على غرار CUDA. لم يعد ROCm مجرد "بنية تحتية خاصة بلينكس" بل أصبح منصة حوسبة ذكاء اصطناعي متعددة المنصات. يجمع **hello-rocm** أدلة عملية لتمكين المزيد من الأشخاص من استخدام معالجات AMD الرسومية في التدريب والاستدلال.
+
+&emsp;&emsp;***نأمل أن نكون جسرًا بين معالجات AMD الرسومية والمطورين اليوميين—منفتحين، شاملين، وموجهين نحو مستقبل أوسع للذكاء الاصطناعي.***
+
+## لمن هذا المشروع
+
+&emsp;&emsp;قد تجد هذا المشروع مفيدًا إذا كنت:
+
+* تمتلك معالج AMD رسوميًا وترغب في تشغيل نماذج اللغة الكبيرة محليًا؛
+* ترغب في البناء على AMD ولكنك تفتقر إلى منهج ROCm منظم؛
+* تهتم بالنشر والاستدلال الفعال من حيث التكلفة؛
+* لديك فضول حول ROCm وتفضل التعلم العملي.
+
+## خريطة الطريق والهيكل
+
+&emsp;&emsp;يتبع المستودع سير عمل ROCm الكامل لنماذج اللغة الكبيرة: **أساس موحد (00-Environment)**، النشر، الضبط الدقيق، ومواضيع البنية التحتية:
+
+### هيكل المستودع
+
+```
+hello-rocm/
+├── 00-Environment/         # تثبيت وتكوين ROCm الأساسي
+├── 01-Deploy/              # نشر نماذج اللغة الكبيرة على ROCm
+├── 02-Fine-tune/           # ضبط دقيق لنماذج اللغة الكبيرة على ROCm
+├── 03-Infra/               # البنية التحتية / المشغلات على ROCm
+├── 04-References/          # مراجع ROCm منسقة
+└── 05-AMD-YES/             # عروض مشاريع مجتمع AMD
+```
+
+### 00. البيئة — أساس ROCm
+
+<p align="center">
+  <strong>🛠️ تثبيت وتكوين بيئة ROCm</strong><br>
+  <em>أساس واحد · ROCm 7.12.0 · ويندوز / أوبونتو · uv + PyTorch</em><br>
+  📖 <strong><a href="../../00-Environment/README_AR.md">بدء استخدام بيئة ROCm</a></strong>
+</p>
+
+<table align="center" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border: none !important;">
+  <tr>
+    <td valign="top" width="50%" style="border: none !important;" align="center">
+      • <a href="../../00-Environment/rocm-gpu-architecture-table.md">خريطة بنية المعالج الرسومي وفهرس pip</a><br>
+      • ويندوز 11: برامج التشغيل، المتطلبات الأمنية، خطوات التثبيت<br>
+      • أوبونتو 24.04: تثبيت قائم على uv ونص تثبيت موحد اختياري<br>
+      • التحقق، الإلغاء، وتبديل أهداف المعالج الرسومي
+    </td>
+  </tr>
+</table>
+
+### 01. النشر — نشر نماذج اللغة الكبيرة على ROCm
+
+<p align="center">
+  <strong>🚀 نشر نماذج اللغة الكبيرة على ROCm</strong><br>
+  <em>من الصفر إلى نموذج قيد التشغيل على معالجات AMD الرسومية</em><br>
+  📖 <strong><a href="../../01-Deploy/README_AR.md">بدء استخدام نشر ROCm</a></strong>
+</p>
+
+<table align="center" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border: none !important;">
+  <tr>
+    <td valign="top" width="50%" style="border: none !important;" align="center">
+      • LM Studio من الصفر<br>
+      • vLLM من الصفر<br>
+      • Ollama من الصفر<br>
+      • llama.cpp من الصفر<br>
+      • ATOM من الصفر
+    </td>
+  </tr>
+</table>
+
+### 02. الضبط الدقيق — ضبط دقيق لنماذج اللغة الكبيرة على ROCm
+
+<p align="center">
+  <strong>🔧 ضبط دقيق لنماذج اللغة الكبيرة على ROCm</strong><br>
+  <em>ضبط دقيق فعال على معالجات AMD الرسومية</em><br>
+  📖 <strong><a href="../../02-Fine-tune/README.md">بدء استخدام الضبط الدقيق على ROCm</a></strong>
+</p>
+
+<table align="center" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border: none !important;">
+  <tr>
+    <td valign="top" width="50%" style="border: none !important;" align="center">
+      • دروس تعليمية للضبط الدقيق من الصفر<br>
+      • نصوص ضبط دقيق لجهاز واحد<br>
+      • ضبط دقيق متعدد العقد ومتعدد المعالجات الرسومية
+    </td>
+  </tr>
+</table>
+
+### 03. البنية التحتية — المشغلات وعمق المكدس
+
+<p align="center">
+  <strong>⚙️ البنية التحتية والمشغلات على ROCm</strong><br>
+  <em>من مكدس الأجهزة/البرامج إلى الممارسة على مستوى HIP</em><br>
+  📖 <strong><a href="../../03-Infra/README.md">بدء استخدام البنية التحتية على ROCm</a></strong>
+</p>
+
+<table align="center" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border: none !important;">
+  <tr>
+    <td valign="top" width="50%" style="border: none !important;" align="center">
+      • الترحيل التلقائي باستخدام HIPify<br>
+      • ترحيل مكتبات BLAS / DNN (rocBLAS، MIOpen، …)<br>
+      • NCCL → RCCL<br>
+      • تعيين Nsight → rocprof
+    </td>
+  </tr>
+</table>
+
+### 04. المراجع
+
+<p align="center">
+  <strong>📚 مراجع ROCm</strong><br>
+  <em>موارد رسمية ومجتمعية</em><br>
+  📖 <strong><a href="../../04-References/README.md">مراجع ROCm</a></strong>
+</p>
+
+<table align="center" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border: none !important;">
+  <tr>
+    <td valign="top" width="100%" align="center" style="border: none !important;">
+      • <a href="https://rocm.docs.amd.com/">توثيق ROCm الرسمي</a><br>
+      • <a href="https://github.com/amd">AMD على GitHub</a><br>
+      • <a href="https://rocm.docs.amd.com/en/latest/about/release-notes.html">ملاحظات إصدار ROCm</a><br>
+      • أخبار ذات صلة
+    </td>
+  </tr>
+</table>
+
+### 05. AMD-YES — عروض المجتمع
+
+<p align="center">
+  <strong>✨ عروض مشاريع AMD</strong><br>
+  <em>أمثلة يقودها المجتمع على معالجات AMD الرسومية</em><br>
+  📖 <strong><a href="../../05-AMD-YES/README.md">بدء استخدام AMD-YES على ROCm</a></strong>
+</p>
+
+<table align="center" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border: none !important;">
+  <tr>
+    <td valign="top" width="50%" style="border: none !important;" align="center">
+• toy-cli — مساعد طرفية خفيف الوزن لنماذج اللغة<br>
+      • WeChat “Jump Jump” مع YOLOv10 — عرض توضيحي للذكاء الاصطناعي في الألعاب<br>
+      • Chat-甄嬛 — نموذج حوار بأسلوب تاريخي<br>
+      • مخطط السفر — عرض توضيحي لعامل HelloAgents<br>
+      • happy-llm — تدريب موزع لنماذج اللغة الكبيرة
+    </td>
+  </tr>
+</table>
 
 ## المساهمة
 
-&emsp;&emsp;راجع **[规范指南](../../规范指南.md)** و**[CONTRIBUTING.md](../../CONTRIBUTING.md)**. نرحب بالـ Issues وطلبات السحب.
+&emsp;&emsp;نرحب بجميع أنواع المساهمات:
+
+* تحسين أو إضافة دروس تعليمية
+* تصحيح الأخطاء والعلل
+* مشاركة مشاريع AMD الخاصة بك
+* اقتراح أفكار وتوجيهات
+
+&emsp;&emsp;يرجى قراءة **[دليل المعايير](../../规范指南.md)** (الهيكل، التسمية، الصور — متوافقة مع دروس مثل Qwen3)، ثم **[CONTRIBUTING.md](../../CONTRIBUTING.md)** (المشكلات، طلبات السحب، واتفاقيات الدليل لكل نموذج).
+
+&emsp;&emsp;إذا كنت ترغب في المساعدة في صيانة المستودع على المدى الطويل، تواصل معنا — يمكننا إضافتك كمشرف.
+
+## شكر وتقدير
+
+### المساهمون الأساسيون
+
+- [Zhixue Song (不要葱姜蒜) — قائد المشروع](https://github.com/KMnO4-zx) (Datawhale)
+- [Yu Chen — قائد المشروع](https://github.com/lucachen) (المحتوى — خبير Google في التعلم الآلي)
+- [Jiahang Pan — مساهم](https://github.com/amdjiahangpan) (المحتوى — مهندس برمجيات في AMD)
+- [Weihong Liu — مساهم](https://github.com/Weihong-Liu) (Datawhale)
+
+> المزيد من المساهمين مرحب بهم دائمًا.
+
+### آخرون
+
+- الأفكار والملاحظات مرحب بها — يرجى فتح مشكلات.
+- شكرًا لكل من ساهم في الدروس التعليمية.
+- شكرًا لـ **برنامج AMD الجامعي** لدعم هذا المشروع.
+
+<div align=center style="margin-top: 30px;">
+  <a href="https://github.com/datawhalechina/hello-rocm/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=datawhalechina/hello-rocm" />
+  </a>
+</div>
+
+## الترخيص
+
+[رخصة MIT](../../LICENSE)
+
+---
+
+<div align="center">
+
+**دعونا نبني مستقبل الذكاء الاصطناعي من AMD معًا.** 💪
+
+صنع بحب ❤️ من مجتمع hello-rocm
+
+</div>
