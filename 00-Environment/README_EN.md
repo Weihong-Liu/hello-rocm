@@ -39,6 +39,7 @@
 | Python | 3.11 / 3.12 / 3.13 | Managed by uv |
 | **Windows Version** | **11 25H2** | — |
 | **Adrenalin Driver (Windows)** | **26.3.1** | [**⬇️ Download Adrenalin 26.3.1**](https://www.amd.com/en/resources/support-articles/release-notes/RN-RAD-WIN-26-3-1.html#Downloads) |
+| **Visual Studio 2022 (Windows)** | **Community, select "Desktop development with C++"** | [**⬇️ Download VS 2022**](https://visualstudio.microsoft.com/downloads/) |
 | Ubuntu | 24.04.3 (HWE kernel 6.14 for Ryzen APU) | [Ubuntu Downloads](https://ubuntu.com/download/desktop) |
 
 ---
@@ -66,6 +67,9 @@
 |:---|:---|
 | **Windows Version** | **Must be Windows 11 25H2** (Settings → System → About) |
 | **Adrenalin Driver** | **Must be 26.3.1** ([⬇️ Download](https://www.amd.com/en/resources/support-articles/release-notes/RN-RAD-WIN-26-3-1.html#Downloads)) |
+| **Visual Studio 2022** (Optional) | Community edition, select "Desktop development with C++" ([⬇️ Download](https://visualstudio.microsoft.com/downloads/)). Required for AMD Quark or custom op compilation |
+
+![Visual Studio installer — select "Desktop development with C++"](./images/visual_studil_c++_desktop_installer.png)
 
 ### 1.2 Remove Conflicting Software
 
