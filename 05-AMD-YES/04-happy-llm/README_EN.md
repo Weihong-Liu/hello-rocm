@@ -88,23 +88,17 @@ Based on the Transformers + DeepSpeed framework, reproduce production-grade pre-
 
 ### Step 1: Environment Preparation
 
+> 📖 For ROCm + PyTorch base environment installation, see [00-Environment](../../00-Environment/README_en.md). Continue below after completing that setup.
+
 ```bash
 cd 04-happy-llm
 
-# Upgrade pip
-python -m pip install --upgrade pip
-
-# Install rocm and rocm version of torch torchvision torchaudio
-# This test uses 4*AMD Radeon™ AI PRO R9700 with architecture gfx1201. If your architecture is different, please download accordingly
-pip install --index-url https://repo.amd.com/rocm/whl/gfx120X-all/ "rocm[libraries,devel]"
-pip install --index-url https://repo.amd.com/rocm/whl/gfx120X-all/ torch torchvision torchaudio
-
-# Install project dependencies
-pip install -r ./chapter5/code/requirements.txt
-pip install -r ./chapter6/code/requirements.txt
+# After activating your virtual environment, install project-specific dependencies
+uv pip install -r ./chapter5/code/requirements.txt
+uv pip install -r ./chapter6/code/requirements.txt
 ```
 
-> This project has been tested with 4*AMD Radeon™ AI PRO R9700. For compatibility of other Instinct/Radeon PRO/Radeon/Ryzen series, please refer to https://rocm.docs.amd.com/en/7.12.0-preview/compatibility/compatibility-matrix.html
+> This project was tested with 4×AMD Radeon™ AI PRO R9700 (gfx1201). For other architectures, replace the `--index-url` in [00-Environment](../../00-Environment/README_en.md).
 
 ### Step 2: Choose Your Learning Path
 
