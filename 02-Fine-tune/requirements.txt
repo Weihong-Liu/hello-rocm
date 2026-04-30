@@ -1,0 +1,13 @@
+# Common fine-tuning dependencies for the 02-Fine-tune examples.
+# Install ROCm and ROCm PyTorch separately from the AMD gfx1151 index first.
+modelscope
+transformers
+accelerate
+datasets
+peft
+swanlab
+trl
+scikit-learn
+huggingface-hub
+pandas
+tqdm
