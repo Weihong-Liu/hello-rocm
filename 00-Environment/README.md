@@ -39,6 +39,7 @@
 | Python | 3.11 / 3.12 / 3.13 | 由 uv 自动管理 |
 | **Windows 版本** | **11 25H2** | — |
 | **Adrenalin Driver (Windows)** | **26.3.1** | [**⬇️ 下载 Adrenalin 26.3.1**](https://www.amd.com/en/resources/support-articles/release-notes/RN-RAD-WIN-26-3-1.html#Downloads) |
+| **Visual Studio 2022 (Windows)** | **Community，勾选「使用 C++ 的桌面开发」** | [**⬇️ 下载 VS 2022**](https://visualstudio.microsoft.com/zh-hans/downloads/) |
 | Ubuntu | 24.04.3 (HWE kernel 6.14 for Ryzen APU) | [Ubuntu Downloads](https://ubuntu.com/download/desktop) |
 
 ---
@@ -66,6 +67,9 @@
 |:---|:---|
 | **Windows 版本** | **必须 Windows 11 25H2**（设置 → 系统 → 关于 查看） |
 | **Adrenalin 驱动** | **必须 26.3.1**（[⬇️ 下载](https://www.amd.com/en/resources/support-articles/release-notes/RN-RAD-WIN-26-3-1.html#Downloads)） |
+| **Visual Studio 2022**（可选） | Community 版即可，安装时勾选「使用 C++ 的桌面开发」（[⬇️ 下载](https://visualstudio.microsoft.com/zh-hans/downloads/)）。AMD Quark 等需要编译自定义算子时必需 |
+
+![Visual Studio 安装勾选「使用 C++ 的桌面开发」](./images/visual_studil_c++_desktop_installer.png)
 
 ### 1.2 卸载冲突软件
 
