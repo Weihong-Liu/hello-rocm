@@ -7,7 +7,7 @@
 
 *零基础快速上手 AMD GPU 大模型部署*
 
-[返回主页](../README.md)
+[返回主页](../README.md) · [English](./README_EN.md)
 
 </div>
 

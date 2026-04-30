@@ -1,209 +1,275 @@
 <div align=center>
-  <h1>hello-rocm</h1>
+  <img src="./images/head.png" >
   <strong>AMD YES! 🚀</strong>
 </div>
 
 <div align="center">
 
-*Open Source · Community Driven · Making AMD AI Ecosystem More Accessible*
+*Open Source · Community Driven · Making the AMD AI Ecosystem More Accessible*
 
-[中文](./README.md) | English
+<p align="center">
+  <a href="./README_en.md"><img alt="English" src="https://img.shields.io/badge/English-d9d9d9"></a>
+  <a href="./README.md"><img alt="简体中文" src="https://img.shields.io/badge/简体中文-d9d9d9"></a>
+  <a href="./docs-readme/zh-TW/README.md"><img alt="繁體中文" src="https://img.shields.io/badge/繁體中文-d9d9d9"></a>
+  <a href="./docs-readme/ja-JP/README.md"><img alt="日本語" src="https://img.shields.io/badge/日本語-d9d9d9"></a>
+  <a href="./docs-readme/es-ES/README.md"><img alt="Español" src="https://img.shields.io/badge/Español-d9d9d9"></a>
+  <a href="./docs-readme/fr-FR/README.md"><img alt="Français" src="https://img.shields.io/badge/Français-d9d9d9"></a>
+  <a href="./docs-readme/ko-KR/README.md"><img alt="한국어" src="https://img.shields.io/badge/한국어-d9d9d9"></a>
+  <a href="./docs-readme/ar-SA/README.md"><img alt="العربية" src="https://img.shields.io/badge/العربية-d9d9d9"></a>
+  <a href="./docs-readme/vi-VN/README.md"><img alt="Tiếng_Việt" src="https://img.shields.io/badge/Tiếng_Việt-d9d9d9"></a>
+  <a href="./docs-readme/de-DE/README.md"><img alt="Deutsch" src="https://img.shields.io/badge/Deutsch-d9d9d9"></a>
+</p>
 
 </div>
 
 
-&emsp;&emsp;Since **ROCm 7.10.0** (released on December 11, 2025), ROCm now supports seamless installation in Python virtual environments just like CUDA, and officially supports both **Linux and Windows** platforms. This marks a major breakthrough for AMD in the AI field — learners and LLM enthusiasts are no longer limited to NVIDIA for hardware choices, and AMD GPUs are becoming a strong competitive alternative.
+&emsp;&emsp;Since **ROCm 7.10.0** (released December 11, 2025), ROCm can be installed seamlessly in Python virtual environments much like CUDA, with official support for both **Linux and Windows**. This is a major step for AMD in AI: learners and LLM enthusiasts are no longer limited to NVIDIA hardware—AMD GPUs are a strong, practical choice.
 
-&emsp;&emsp;Dr. Lisa Su announced at the launch event that ROCm will maintain a **new release every 6 weeks** iteration pace, fully pivoting towards AI. The future looks exciting!
+&emsp;&emsp;AMD has committed to a **roughly six-week** ROCm release cadence with a strong focus on AI. The roadmap is exciting.
 
-&emsp;&emsp;However, there is currently a global lack of systematic learning tutorials for ROCm LLM inference, deployment, training, fine-tuning, and infrastructure. **hello-rocm** was created to fill this gap.
+&emsp;&emsp;There is still a shortage of systematic tutorials worldwide for ROCm LLM inference, deployment, training, fine-tuning, and infrastructure topics. **hello-rocm** exists to fill that gap.
 
-&emsp;&emsp;**The main content of this project is tutorials, helping more students and future practitioners understand and become familiar with AMD ROCm! Anyone can raise issues or submit PRs to help build and maintain this project together.**
+&emsp;&emsp;**This project is primarily tutorials** so students and future practitioners can learn AMD ROCm in a structured way. **Anyone is welcome to open issues or submit pull requests** to grow and maintain the project together.
 
-> &emsp;&emsp;***Learning Suggestion: We recommend starting with environment configuration and deployment, then moving on to model fine-tuning, and finally exploring Infra operator optimization. Beginners can start with LM Studio or vLLM deployment.***
+> &emsp;&emsp;***Learning path: Finish [00-Environment](./00-Environment/README_EN.md) first (ROCm + PyTorch + **uv**), then deployment and fine-tuning, and finally Infra / operator-level topics. After your environment works, LM Studio or vLLM is a good place to start.***
 
-## Project Significance
+### Latest updates
 
-&emsp;&emsp;What is ROCm?
-
-> ROCm (Radeon Open Compute) is an open-source GPU computing platform launched by AMD, designed to provide an open software stack for high-performance computing and machine learning. It supports parallel computing on AMD GPUs and serves as an alternative to CUDA on the AMD platform.
-
-&emsp;&emsp;The battle of LLMs is in full swing, with open-source LLMs emerging one after another. However, most current LLM tutorials and development tools are based on the NVIDIA CUDA ecosystem. For developers who want to use AMD GPUs, the lack of systematic learning resources is a pain point.
-
-&emsp;&emsp;Starting from ROCm 7.10.0 (December 11, 2025), AMD restructured the underlying ROCm architecture through TheRock project, decoupling the compute runtime from the operating system. This allows the same ROCm upper-level interfaces to run on both Linux and Windows, and supports direct installation into Python virtual environments just like CUDA. This means ROCm is no longer just an "engineering tool" for Linux, but has evolved into a truly cross-platform GPU computing platform for AI learners and developers — whether using Windows or Linux, users can now use AMD GPUs for training and inference with a lower barrier to entry. LLM and AI enthusiasts are no longer bound to the single NVIDIA ecosystem for hardware choices. AMD GPUs are gradually becoming an AI computing platform that can be genuinely used by ordinary users.
-
-&emsp;&emsp;This project aims to provide complete tutorials for LLM deployment, fine-tuning, and training on the AMD ROCm platform based on the experience of core contributors. We hope to gather co-creators to enrich the AMD AI ecosystem together.
-
-&emsp;&emsp;***We hope to become a bridge between AMD GPUs and the general public, embracing a broader AI world with the spirit of freedom and equality in open source.***
-
-## Target Audience
-
-&emsp;&emsp;This project is suitable for the following learners:
-
-* Want to use AMD GPUs for LLM development but can't find systematic tutorials;
-* Hope to deploy and run LLMs at low cost with high value;
-* Interested in the ROCm ecosystem and want to get hands-on experience;
-* AI learners who want to expand knowledge beyond NVIDIA GPU platforms;
-* Want to build domain-specific private LLMs on the AMD platform;
-* And the broadest, most ordinary student community.
-
-## Project Roadmap and Progress
-
-&emsp;&emsp;This project is organized around the full workflow of ROCm LLM applications, including environment configuration, deployment, fine-tuning, and operator optimization:
-
-### Latest News
+- *2026.3.11:* [*ROCm 7.12.0 Release Notes*](https://rocm.docs.amd.com/en/7.12.0-preview/index.html)
 
 - *2025.12.11:* [*ROCm 7.10.0 Release Notes*](https://rocm.docs.amd.com/en/7.10.0-preview/about/release-notes.html)
 
-### Project Structure
+### Supported models & tutorials
+
+<p align="center">
+  <strong>✨ Mainstream LLMs: environment · multi-framework inference · fine-tuning ✨</strong><br>
+  <em>Unified ROCm setup (Windows / Ubuntu) + ROCm 7+ · per-model tutorials (growing)</em><br>
+ <a href="./00-Environment/README_EN.md">00 — Environment setup</a>
+</p>
+
+<table align="center" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border: none !important;">
+
+  <tr>
+    <td colspan="2" align="center" style="border: none !important;"><strong>Qwen3</strong></td>
+  </tr>
+  <tr>
+    <td valign="top" width="50%" style="border: none !important;">
+      • <a href="./01-Deploy/models/Qwen3/lm-studio-rocm7-deploy.md">LM Studio</a><br>
+      • <a href="./01-Deploy/models/Qwen3/vllm-rocm7-deploy.md">vLLM</a><br>
+      • <a href="./01-Deploy/models/Qwen3/ollama-rocm7-deploy.md">Ollama</a><br>
+      • <a href="./01-Deploy/models/Qwen3/llamacpp-rocm7-deploy.md">llama.cpp</a><br>
+    </td>
+    <td valign="top" width="50%" style="border: none !important;">
+      • <a href="./02-Fine-tune/models/Qwen3/01-Qwen3-0.6B-LoRA及SwanLab可视化记录.md">Qwen3-0.6B LoRA + SwanLab</a><br>
+      • <a href="./02-Fine-tune/models/Qwen3/01-Qwen3-8B-LoRA.ipynb">Qwen3-8B LoRA (Notebook)</a><br>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center" style="border: none !important;"><strong>Gemma4</strong></td>
+  </tr>
+  <tr>
+    <td valign="top" width="50%" style="border: none !important;">
+      • <a href="./01-Deploy/models/Gemma4/gemma4_model.md">Gemma 4 model overview</a><br>
+      • <a href="./01-Deploy/models/Gemma4/lm-studio-rocm7-deploy.md">LM Studio</a><br>
+      • <a href="./01-Deploy/models/Gemma4/vllm-rocm7-deploy.md">vLLM</a><br>
+      • <a href="./01-Deploy/models/Gemma4/ollama-rocm7-deploy.md">Ollama</a><br>
+      • <a href="./01-Deploy/models/Gemma4/llamacpp-rocm7-deploy.md">llama.cpp</a><br>
+    </td>
+    <td valign="top" width="50%" style="border: none !important;">
+      • <a href="./02-Fine-tune/models/Gemma4/01-Gemma4-E4B-LoRA及SwanLab可视化记录.ipynb">Gemma4 E4B LoRA fine-tuning (TRL, Notebook)</a><br>
+    </td>
+  </tr>
+</table>
+
+## Why this project
+
+&emsp;&emsp;What is ROCm?
+
+> ROCm (Radeon Open Compute) is AMD’s open GPU computing stack for HPC and machine learning. It lets you run parallel workloads on AMD GPUs and is the primary CUDA-alternative path on AMD hardware.
+
+&emsp;&emsp;Open LLMs are everywhere, yet most tutorials and tools assume the NVIDIA CUDA stack. Developers who choose AMD often lack end-to-end, ROCm-native learning material.
+
+&emsp;&emsp;From **ROCm 7.10.0** (December 11, 2025), AMD’s **TheRock** work decouples the compute runtime from the OS so the same ROCm interfaces run on **Linux and Windows**, and ROCm can be installed into Python environments similarly to CUDA. ROCm is no longer “Linux-only plumbing”—it is a cross-platform AI compute platform. **hello-rocm** collects practical guides so more people can actually use AMD GPUs for training and inference.
+
+&emsp;&emsp;***We hope to be a bridge between AMD GPUs and everyday builders—open, inclusive, and aimed at a wider AI future.***
+
+## Who it is for
+
+&emsp;&emsp;You may find this project useful if you:
+
+* Have an AMD GPU and want to run LLMs locally;
+* Want to build on AMD but lack a structured ROCm curriculum;
+* Care about cost-effective deployment and inference;
+* Are curious about ROCm and prefer hands-on learning.
+
+## Roadmap and structure
+
+&emsp;&emsp;The repo follows the full ROCm LLM workflow: **unified baseline (00-Environment)**, deployment, fine-tuning, and Infra-style topics:
+
+
+### Repository layout
 
 ```
 hello-rocm/
-├── 01-Deploy/              # ROCm LLM Deployment Practice
-├── 02-Fine-tune/           # ROCm LLM Fine-tuning Practice
-├── 03-Infra/               # ROCm Operator Optimization Practice
-├── 04-References/          # ROCm Quality Reference Materials
-└── 05-AMD-YES/             # AMD Project Case Collection
+├── 00-Environment/         # ROCm baseline install & config
+├── 01-Deploy/              # LLM deployment on ROCm
+├── 02-Fine-tune/           # LLM fine-tuning on ROCm
+├── 03-Infra/               # Infra / operators on ROCm
+├── 04-References/          # Curated ROCm references
+└── 05-AMD-YES/             # Community AMD project showcases
 ```
 
-### 01. Deploy - ROCm LLM Deployment
+### 00. Environment — ROCm baseline
 
 <p align="center">
-  <strong>🚀 ROCm LLM Deployment Practice</strong><br>
-  <em>Quick start guide for LLM deployment on AMD GPUs from scratch</em><br>
+  <strong>🛠️ ROCm environment install & configuration</strong><br>
+  <em>Single baseline · ROCm 7.12.0 · Windows / Ubuntu · uv + PyTorch</em><br>
+  📖 <strong><a href="./00-Environment/README_EN.md">Getting Started with ROCm Environment</a></strong>
+</p>
+
+<table align="center" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border: none !important;">
+  <tr>
+    <td valign="top" width="50%" style="border: none !important;" align="center">
+      • <a href="./00-Environment/rocm-gpu-architecture-table.md">GPU architecture & pip index map</a><br>
+      • Windows 11: drivers, security prerequisites, install flow<br>
+      • Ubuntu 24.04: uv-based install and optional unified installer script<br>
+      • Verification, uninstall, and switching GPU targets
+    </td>
+  </tr>
+</table>
+
+### 01. Deploy — LLM deployment on ROCm
+
+<p align="center">
+  <strong>🚀 ROCm LLM deployment</strong><br>
+  <em>From zero to a running model on AMD GPUs</em><br>
   📖 <strong><a href="./01-Deploy/README.md">Getting Started with ROCm Deploy</a></strong>
 </p>
 
-<table align="center">
+<table align="center" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border: none !important;">
   <tr>
-    <td valign="top" width="50%">
-      • LM Studio LLM Deployment from Scratch<br>
-      • vLLM LLM Deployment from Scratch<br>
-    </td>
-    <td valign="top" width="50%">
-      • SGLang LLM Deployment from Scratch<br>
-      • ATOM LLM Deployment from Scratch
+    <td valign="top" width="50%" style="border: none !important;" align="center">
+      • LM Studio from scratch<br>
+      • vLLM from scratch<br>
+      • Ollama from scratch<br>
+      • llama.cpp from scratch<br>
+      • ATOM from scratch
     </td>
   </tr>
 </table>
 
-### 02. Fine-tune - ROCm LLM Fine-tuning
+### 02. Fine-tune — LLM fine-tuning on ROCm
 
 <p align="center">
-  <strong>🔧 ROCm LLM Fine-tuning Practice</strong><br>
-  <em>Efficient model fine-tuning on AMD GPUs</em><br>
+  <strong>🔧 ROCm LLM fine-tuning</strong><br>
+  <em>Efficient fine-tuning on AMD GPUs</em><br>
   📖 <strong><a href="./02-Fine-tune/README.md">Getting Started with ROCm Fine-tune</a></strong>
 </p>
 
-<table align="center">
+<table align="center" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border: none !important;">
   <tr>
-    <td valign="top" width="50%">
-      • LLM Fine-tuning Tutorial from Scratch<br>
-      • Single-machine LLM Fine-tuning Scripts<br>
-    </td>
-    <td valign="top" width="50%">
-      • Multi-node Multi-GPU Fine-tuning Tutorial
+    <td valign="top" width="50%" style="border: none !important;" align="center">
+      • Fine-tuning tutorials from scratch<br>
+      • Single-machine fine-tuning scripts<br>
+      • Multi-node multi-GPU fine-tuning
     </td>
   </tr>
 </table>
 
-### 03. Infra - ROCm Operator Optimization
+### 03. Infra — operators & stack depth
 
 <p align="center">
-  <strong>⚙️ ROCm Operator Optimization Practice</strong><br>
-  <em>Migration and optimization guide from CUDA to ROCm</em><br>
+  <strong>⚙️ ROCm Infra & operators</strong><br>
+  <em>From hardware/software stack to HIP-level practice</em><br>
   📖 <strong><a href="./03-Infra/README.md">Getting Started with ROCm Infra</a></strong>
 </p>
 
-<table align="center">
+<table align="center" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border: none !important;">
   <tr>
-    <td valign="top" width="50%">
-      • HIPify Automated Migration in Practice<br>
-      • Seamless Switching of BLAS and DNN<br>
-    </td>
-    <td valign="top" width="50%">
-      • Migration from NCCL to RCCL<br>
-      • Mapping from Nsight to Rocprof
+    <td valign="top" width="50%" style="border: none !important;" align="center">
+      • HIPify automated migration<br>
+      • BLAS / DNN library migration (rocBLAS, MIOpen, …)<br>
+      • NCCL → RCCL<br>
+      • Nsight → rocprof mapping
     </td>
   </tr>
 </table>
 
-### 04. References - ROCm Quality Reference Materials
+### 04. References
 
 <p align="center">
-  <strong>📚 ROCm Quality Reference Materials</strong><br>
-  <em>Curated AMD official and community resources</em><br>
+  <strong>📚 ROCm references</strong><br>
+  <em>Official and community resources</em><br>
   📖 <strong><a href="./04-References/README.md">ROCm References</a></strong>
 </p>
 
-<table align="center">
+<table align="center" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border: none !important;">
   <tr>
-    <td valign="top" width="50%">
-      • <a href="https://rocm.docs.amd.com/">ROCm Official Documentation</a><br>
-      • <a href="https://github.com/amd">AMD GitHub</a><br>
-    </td>
-    <td valign="top" width="50%">
-      • <a href="https://rocm.docs.amd.com/en/latest/about/release-notes.html">ROCm Release Notes</a><br>
-      • Related News
+    <td valign="top" width="100%" align="center" style="border: none !important;">
+      • <a href="https://rocm.docs.amd.com/">ROCm official documentation</a><br>
+      • <a href="https://github.com/amd">AMD on GitHub</a><br>
+      • <a href="https://rocm.docs.amd.com/en/latest/about/release-notes.html">ROCm release notes</a><br>
+      • Related news
     </td>
   </tr>
 </table>
 
-### 05. AMD-YES - AMD Project Case Collection
+### 05. AMD-YES — community showcases
 
 <p align="center">
-  <strong>✨ AMD Project Case Collection</strong><br>
-  <em>Community-driven AMD GPU project practices</em><br>
+  <strong>✨ AMD project showcases</strong><br>
+  <em>Community-driven examples on AMD GPUs</em><br>
   📖 <strong><a href="./05-AMD-YES/README.md">Getting Started with ROCm AMD-YES</a></strong>
 </p>
 
-<table align="center">
+<table align="center" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border: none !important;">
   <tr>
-    <td valign="top" width="50%">
-      • AMchat - Advanced Mathematics<br>
-      • Chat-Huanhuan<br>
-      • Tianji<br>
-    </td>
-    <td valign="top" width="50%">
-      • Digital Life<br>
-      • happy-llm
+    <td valign="top" width="50%" style="border: none !important;" align="center">
+      • toy-cli — lightweight terminal LLM assistant<br>
+      • WeChat “Jump Jump” with YOLOv10 — game AI demo<br>
+      • Chat-甄嬛 — period-style dialogue model<br>
+      • Travel planner — HelloAgents agent demo<br>
+      • happy-llm — distributed LLM training
     </td>
   </tr>
 </table>
 
 ## Contributing
 
-&emsp;&emsp;We welcome all forms of contributions! Whether it's:
+&emsp;&emsp;We welcome contributions of all kinds:
 
-* Improving or adding new tutorials
-* Fixing errors and bugs
-* Sharing your AMD projects
-* Providing suggestions and ideas
+* Improve or add tutorials
+* Fix errors and bugs
+* Share your AMD projects
+* Suggest ideas and directions
 
-&emsp;&emsp;Please refer to [CONTRIBUTING.md](./CONTRIBUTING.md) for details.
+&emsp;&emsp;Please read **[规范指南](./规范指南.md)** (structure, naming, images—aligned with tutorials such as Qwen3), then **[CONTRIBUTING.md](./CONTRIBUTING.md)** (issues, PRs, and per-model directory conventions).
 
-&emsp;&emsp;If you want to participate deeply, please contact us, and we will add you to the project maintainers.
+&emsp;&emsp;If you want to help maintain the repo long term, reach out—we can add you as a maintainer.
 
 ## Acknowledgments
 
-### Core Contributors
+### Core contributors
 
-- [Zhixue Song (No Green Onion Ginger Garlic) - Project Lead](https://github.com/KMnO4-zx) (Datawhale Member)
-- [Yu Chen - Project Lead](https://github.com/lucachen) (Content Creator - Google Developer Expert in Machine Learning)
+- [Zhixue Song (不要葱姜蒜) — project lead](https://github.com/KMnO4-zx) (Datawhale)
+- [Yu Chen — project lead](https://github.com/lucachen) (content — Google Developer Expert in Machine Learning)
+- [Jiahang Pan — contributor](https://github.com/amdjiahangpan) (content — AMD software engineer)
+- [Weihong Liu — contributor](https://github.com/Weihong-Liu) (Datawhale)
 
-> Note: More contributors are welcome to join!
+> More contributors are always welcome.
 
 ### Others
 
-- If you have any ideas, please contact us. Issues are also very welcome!
-- Special thanks to the following contributors who have contributed to the tutorials!
-- Thanks to the AMD University Program for supporting this project!!
+- Ideas and feedback are welcome—please open issues.
+- Thanks to everyone who has contributed tutorials.
+- Thanks to **AMD University Program** for supporting this project.
 
 <div align=center style="margin-top: 30px;">
   <a href="https://github.com/datawhalechina/hello-rocm/graphs/contributors">
     <img src="https://contrib.rocks/image?repo=datawhalechina/hello-rocm" />
   </a>
 </div>
+
 
 ## License
 
@@ -213,7 +279,7 @@ hello-rocm/
 
 <div align="center">
 
-**Let's build the future of AMD AI together!** 💪
+**Let’s build the future of AMD AI together.** 💪
 
 Made with ❤️ by the hello-rocm community
 

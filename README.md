@@ -7,7 +7,18 @@
 
 *开源 · 社区驱动 · 让 AMD AI 生态更易用*
 
-中文 | [English](./README_en.md)
+<p align="center">
+  <a href="./README_en.md"><img alt="English" src="https://img.shields.io/badge/English-d9d9d9"></a>
+  <a href="./README.md"><img alt="简体中文" src="https://img.shields.io/badge/简体中文-d9d9d9"></a>
+  <a href="./docs-readme/zh-TW/README.md"><img alt="繁體中文" src="https://img.shields.io/badge/繁體中文-d9d9d9"></a>
+  <a href="./docs-readme/ja-JP/README.md"><img alt="日本語" src="https://img.shields.io/badge/日本語-d9d9d9"></a>
+  <a href="./docs-readme/es-ES/README.md"><img alt="Español" src="https://img.shields.io/badge/Español-d9d9d9"></a>
+  <a href="./docs-readme/fr-FR/README.md"><img alt="Français" src="https://img.shields.io/badge/Français-d9d9d9"></a>
+  <a href="./docs-readme/ko-KR/README.md"><img alt="한국어" src="https://img.shields.io/badge/한국어-d9d9d9"></a>
+  <a href="./docs-readme/ar-SA/README.md"><img alt="العربية" src="https://img.shields.io/badge/العربية-d9d9d9"></a>
+  <a href="./docs-readme/vi-VN/README.md"><img alt="Tiếng_Việt" src="https://img.shields.io/badge/Tiếng_Việt-d9d9d9"></a>
+  <a href="./docs-readme/de-DE/README.md"><img alt="Deutsch" src="https://img.shields.io/badge/Deutsch-d9d9d9"></a>
+</p>
 
 </div>
 
@@ -20,7 +31,7 @@
 
 &emsp;&emsp;**项目的主要内容就是教程，让更多的学生和未来的从业者了解和熟悉 AMD ROCm 的使用方法！任何人都可以提出 issue 或是提交 PR，共同构建维护这个项目。**
 
-> &emsp;&emsp;***学习建议：本项目的学习建议是，先学习环境配置和部署，然后再学习模型的微调，最后再探索 Infra 算子优化。初学者可以从 LM Studio 或 vLLM 部署开始优先学习。***
+> &emsp;&emsp;***学习建议：建议先完成 [00-Environment](./00-Environment/README.md) 中的环境安装（ROCm + PyTorch + uv），再学习部署与微调，最后探索 Infra 算子优化。初学者可在环境就绪后从 LM Studio 或 vLLM 部署开始。***
 
 ### 最新动态
 
@@ -32,21 +43,20 @@
 
 <p align="center">
   <strong>✨ 主流大模型：环境配置 · 多框架推理 · 微调实践 ✨</strong><br>
-  <em>Ubuntu 24.04 + ROCm 7+ 教程（按模型分目录，持续扩充）</em><br>
-  📖 <strong><a href="./01-Deploy/README.md">查看部署模块与教程导航</a></strong> | 
-  🎯 <strong>环境准备</strong>：<a href="./01-Deploy/models/Qwen3/env-prepare-ubuntu24-rocm7.md">Qwen3</a> · <a href="./01-Deploy/models/Gemma4/env-prepare-ubuntu24-rocm7.md">Gemma4</a>
+  <em>ROCm 统一环境安装（Windows / Ubuntu）+ ROCm 7+ · 按模型分目录教程（持续扩充）</em><br>
+ <a href="./00-Environment/README.md">00-环境安装教程</a> 
 </p>
 
 <table align="center" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border: none !important;">
+
   <tr>
     <td colspan="2" align="center" style="border: none !important;"><strong>Qwen3</strong></td>
   </tr>
   <tr>
     <td valign="top" width="50%" style="border: none !important;">
-      • <a href="./01-Deploy/models/Qwen3/env-prepare-ubuntu24-rocm7.md">环境准备</a><br>
       • <a href="./01-Deploy/models/Qwen3/lm-studio-rocm7-deploy.md">LM Studio部署</a><br>
       • <a href="./01-Deploy/models/Qwen3/vllm-rocm7-deploy.md">vLLM部署</a><br>
-       • <a href="./01-Deploy/models/Qwen3/ollama-rocm7-deploy.md">Ollama部署</a><br>
+      • <a href="./01-Deploy/models/Qwen3/ollama-rocm7-deploy.md">Ollama部署</a><br>
       • <a href="./01-Deploy/models/Qwen3/llamacpp-rocm7-deploy.md">llama.cpp部署</a><br>
     </td>
     <td valign="top" width="50%" style="border: none !important;">
@@ -60,15 +70,13 @@
   <tr>
     <td valign="top" width="50%" style="border: none !important;">
       • <a href="./01-Deploy/models/Gemma4/gemma4_model.md">Gemma 4 模型介绍</a><br>
-      • <a href="./01-Deploy/models/Gemma4/env-prepare-ubuntu24-rocm7.md">环境准备</a><br>
       • <a href="./01-Deploy/models/Gemma4/lm-studio-rocm7-deploy.md">LM Studio部署</a><br>
       • <a href="./01-Deploy/models/Gemma4/vllm-rocm7-deploy.md">vLLM部署</a><br>
       • <a href="./01-Deploy/models/Gemma4/ollama-rocm7-deploy.md">Ollama部署</a><br>
       • <a href="./01-Deploy/models/Gemma4/llamacpp-rocm7-deploy.md">llama.cpp部署</a><br>
     </td>
     <td valign="top" width="50%" style="border: none !important;">
-      • <a href="./02-Fine-tune/models/Gemma4/01-Gemma4-E4B-LoRA及SwanLab可视化记录.md">Gemma4-E4B LoRA微调（Markdown）</a><br>
-      • <a href="./02-Fine-tune/models/Gemma4/01-Gemma4-E4B-LoRA及SwanLab可视化记录.ipynb">Gemma4-E4B LoRA微调（Notebook）</a><br>
+      • <a href="./02-Fine-tune/models/Gemma4/01-Gemma4-E4B-LoRA及SwanLab可视化记录.ipynb">Gemma4 - E4B LoRA微调（基于TRL）</a><br>
     </td>
   </tr>
 </table>
@@ -99,19 +107,39 @@
 
 ## 项目规划及进展
 
-&emsp;&emsp;本项目拟围绕 ROCm 大模型应用全流程组织，包括环境配置、部署应用、微调训练、算子优化等：
+&emsp;&emsp;本项目拟围绕 ROCm 大模型应用全流程组织，包括统一环境基线（00-Environment）、部署应用、微调训练、算子优化等：
 
 
 ### 项目结构
 
 ```
 hello-rocm/
+├── 00-Environment/         # ROCm 基础环境安装与配置（统一基线）
 ├── 01-Deploy/              # ROCm 大模型部署实践
 ├── 02-Fine-tune/           # ROCm 大模型微调实践
 ├── 03-Infra/               # ROCm 算子优化实践
 ├── 04-References/          # ROCm 优质参考资料
 └── 05-AMD-YES/             # AMD 实践案例集合
 ```
+
+### 00. Environment - ROCm 基础环境
+
+<p align="center">
+  <strong>🛠️ ROCm 基础环境安装与配置</strong><br>
+  <em>统一环境基线 · ROCm 7.12.0 · Windows / Ubuntu · uv + PyTorch</em><br>
+  📖 <strong><a href="./00-Environment/README.md">Getting Started with ROCm Environment</a></strong>
+</p>
+
+<table align="center" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border: none !important;">
+  <tr>
+    <td valign="top" width="50%" style="border: none !important;" align="center">
+      • <a href="./00-Environment/rocm-gpu-architecture-table.md">GPU 架构与 pip 索引对照表</a><br>
+      • Windows 11 安装、驱动与安全项前置说明<br>
+      • Ubuntu 24.04 安装（uv 方式与备选一键脚本）<br>
+      • 安装校验、卸载与切换其他 GPU 架构
+    </td>
+  </tr>
+</table>
 
 ### 01. Deploy - ROCm 大模型部署
 
@@ -223,12 +251,13 @@ hello-rocm/
 &emsp;&emsp;想要深度参与的同学可以联系我们，我们会将你加入到项目的维护者中。
 
 ## 致谢
-
 ### 核心贡献者
 
 
 - [宋志学(不要葱姜蒜)-项目负责人](https://github.com/KMnO4-zx) （Datawhale成员）
 - [陈榆-项目负责人](https://github.com/lucachen) （内容创作者-谷歌开发者机器学习技术专家）
+- [潘嘉航-项目成员](https://github.com/amdjiahangpan) （内容创作者-AMD软件工程师）
+- [刘伟鸿-项目成员](https://github.com/Weihong-Liu) （Datawhale成员）
 > 注：欢迎更多贡献者加入！
 
 ### 其他
@@ -243,6 +272,7 @@ hello-rocm/
   </a>
 </div>
 
+
 ## License
 
 [MIT License](./LICENSE)
@@ -256,3 +286,4 @@ hello-rocm/
 Made with ❤️ by the hello-rocm community
 
 </div>
+
