@@ -25,25 +25,14 @@ pytorch 2.9.1
 ----------------
 ```
 
-首先 `pip` 换源加速下载并安装依赖包
+> 📖 ROCm + PyTorch 基础环境安装请参考 [00-Environment](../../00-Environment/README.md)，完成后再继续以下步骤。
+
+安装本项目专用依赖：
 
 ```shell
-# 升级pip
-python -m pip install --upgrade pip
-
-# 安装ROCm相关依赖 包含 torch torchvision torchaudio等核心库
-# 以 Ryzen AI 系列为例 
-python -m pip install --index-url https://repo.amd.com/rocm/whl/gfx1151/ "rocm[libraries,devel]"
-python -m pip install --index-url https://repo.amd.com/rocm/whl/gfx1151/ torch torchvision torchaudio
-
-# 更换 pypi 源加速库的安装
-pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
-
-# 安装其他依赖
-pip install -r requirements_rocm_windows.txt
+# 激活虚拟环境后
+uv pip install -r requirements_rocm_windows.txt
 ```
-
-> 本项目使用 Ryzen AI MAX 395/370 运行测试，其他 Radeon 系列适配情况请查看 https://rocm.docs.amd.com/en/7.12.0-preview/compatibility/compatibility-matrix.html
 
 ### 安装 ADB 工具
 
