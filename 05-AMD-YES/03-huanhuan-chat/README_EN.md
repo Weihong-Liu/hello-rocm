@@ -32,30 +32,19 @@ PyTorch 2.9.1
 ----------------
 ```
 
-First, change the `pip` source to accelerate downloads and install dependencies
+> 📖 For ROCm + PyTorch base environment installation, see [00-Environment](../../00-Environment/README_en.md). Continue below after completing that setup.
+
+Install project-specific dependencies:
 
 ```shell
-# Upgrade pip
-python -m pip install --upgrade pip
-
-# Install ROCm 
-# If using Ryzen AI 370, replace gfx1151 with gfx1150 
-python -m pip install --index-url https://repo.amd.com/rocm/whl/gfx1151/ "rocm[libraries,devel]"
-python -m pip install --index-url https://repo.amd.com/rocm/whl/gfx1151/ torch torchvision torchaudio
-
-# Switch to PyPI source for faster library installation
-pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
-
-
-pip install modelscope==1.16.1
-pip install transformers==4.43.1
-pip install accelerate==0.32.1
-pip install peft==0.11.1
-pip install datasets==2.20.0
-pip install huggingface_hub
+# After activating your virtual environment
+uv pip install modelscope==1.16.1
+uv pip install transformers==4.43.1
+uv pip install accelerate==0.32.1
+uv pip install peft==0.11.1
+uv pip install datasets==2.20.0
+uv pip install huggingface_hub
 ```
-
-> This project was tested using Ryzen AI MAX 395/370. For compatibility with other Radeon series, please refer to https://rocm.docs.amd.com/en/7.12.0-preview/compatibility/compatibility-matrix.html
 
 ## Step 2: Data Preparation
 

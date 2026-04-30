@@ -83,23 +83,17 @@ Happy-LLM 完整教程共 7 章 + 1 个扩展篇，分为 **基础理论** 和 *
 
 ### 第一步：环境准备
 
+> 📖 ROCm + PyTorch 基础环境安装请参考 [00-Environment](../../00-Environment/README.md)，完成后再继续以下步骤。
+
 ```bash
 cd 04-happy-llm
 
-# 升级pip
-python -m pip install --upgrade pip
-
-# 安装 rocm 以及 rocm 版本的 torch torchvision torchaudio
-# 本次测试使用的是 4*AMD Radeon™ AI PRO R9700 架构为 gfx1201 如果为其他架构请自行下载
-pip install --index-url https://repo.amd.com/rocm/whl/gfx120X-all/ "rocm[libraries,devel]"
-pip install --index-url https://repo.amd.com/rocm/whl/gfx120X-all/ torch torchvision torchaudio
-
-# 安装项目依赖
-pip install -r ./chapter5/code/requirements.txt
-pip install -r ./chapter6/code/requirements.txt
+# 激活虚拟环境后，安装项目专用依赖
+uv pip install -r ./chapter5/code/requirements.txt
+uv pip install -r ./chapter6/code/requirements.txt
 ```
 
-> 本项目使用 4*AMD Radeon™ AI PRO R9700 运行测试，其他 Instinct/Radeon PRO/Radeon/Ryzen 系列适配情况请查看 https://rocm.docs.amd.com/en/7.12.0-preview/compatibility/compatibility-matrix.html
+> 本项目使用 4×AMD Radeon™ AI PRO R9700（gfx1201）运行测试，其他架构请在 [00-Environment](../../00-Environment/README.md) 中替换对应的 `--index-url`。
 
 ### 第二步：选择学习路径
 

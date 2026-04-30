@@ -32,30 +32,19 @@ pytorch 2.9.1
 ----------------
 ```
 
-首先 `pip` 换源加速下载并安装依赖包
+> 📖 ROCm + PyTorch 基础环境安装请参考 [00-Environment](../../00-Environment/README.md)，完成后再继续以下步骤。
+
+安装本项目专用依赖：
 
 ```shell
-# 升级pip
-python -m pip install --upgrade pip
-
-# 安装rocm 
-# 如果为 Ryzen ai 370 请替换 gfx1151->gfx1150 
-python -m pip install --index-url https://repo.amd.com/rocm/whl/gfx1151/ "rocm[libraries,devel]"
-python -m pip install --index-url https://repo.amd.com/rocm/whl/gfx1151/ torch torchvision torchaudio
-
-# 更换 pypi 源加速库的安装
-pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
-
-
-pip install modelscope==1.16.1
-pip install transformers==4.43.1
-pip install accelerate==0.32.1
-pip install peft==0.11.1
-pip install datasets==2.20.0
-pip install huggingface_hub
+# 激活虚拟环境后
+uv pip install modelscope==1.16.1
+uv pip install transformers==4.43.1
+uv pip install accelerate==0.32.1
+uv pip install peft==0.11.1
+uv pip install datasets==2.20.0
+uv pip install huggingface_hub
 ```
-
-> 本项目使用 Ryzen AI MAX 395/370 运行测试，其他 Radeon 系列适配情况请查看 https://rocm.docs.amd.com/en/7.12.0-preview/compatibility/compatibility-matrix.html
 
 ## Step 2: 数据准备
 

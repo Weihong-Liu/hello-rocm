@@ -14,7 +14,7 @@
 
 ## Step 1: Environment Setup
 
-The base environment for this guide is as follows:
+Base environment:
 
 ```
 ----------------
@@ -25,22 +25,13 @@ pytorch 2.9.1
 ----------------
 ```
 
-First, change the `pip` source to accelerate downloads and install dependencies:
+> 📖 For ROCm + PyTorch base environment installation, see [00-Environment](../../00-Environment/README_en.md). Continue below after completing that setup.
+
+Install project-specific dependencies:
 
 ```shell
-# Upgrade pip
-python -m pip install --upgrade pip
-
-# Install ROCm-related dependencies including core libraries like torch, torchvision, torchaudio, etc.
-# Example for Ryzen AI series
-python -m pip install --index-url https://repo.amd.com/rocm/whl/gfx1151/ "rocm[libraries,devel]"
-python -m pip install --index-url https://repo.amd.com/rocm/whl/gfx1151/ torch torchvision torchaudio
-
-# Switch to PyPI mirror to accelerate library installation
-pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
-
-# Install other dependencies
-pip install -r requirements_rocm_windows.txt
+# After activating your virtual environment
+uv pip install -r requirements_rocm_windows.txt
 ```
 
 > This project has been tested on Ryzen AI MAX 395/370. For compatibility with other Radeon series, please check https://rocm.docs.amd.com/en/7.12.0-preview/compatibility/compatibility-matrix.html
