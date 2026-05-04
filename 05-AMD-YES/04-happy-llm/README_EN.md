@@ -21,6 +21,12 @@
 
 &emsp;&emsp;Through this tutorial, you will deeply understand how large language models work and master the skills to efficiently train LLMs on AMD GPUs.
 
+### Happy-LLM ROCm Training Route
+
+<div align='center'>
+    <img src="./images/happy_llm_rocm_training_pipeline_en.png" alt="Figure 5.4.1 Happy-LLM ROCm training route" width="95%">
+</div>
+
 ## Original Project Chapter Overview
 
 Happy-LLM's complete tutorial consists of 7 chapters + 1 extra chapter, divided into **Fundamentals** and **Hands-on Practice**:

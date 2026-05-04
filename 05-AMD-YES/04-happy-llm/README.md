@@ -10,6 +10,12 @@
 
 > **🎯 本模块（AMD ROCm 版）仅包含原项目的第 5、6 章**，因为这两章涉及 GPU 实际训练，需要针对 AMD ROCm 平台做适配和优化。如果你尚未学习大模型基础理论，建议先阅读原项目的前 4 章（见下方原项目章节概览）。
 
+### Happy-LLM ROCm 训练路线
+
+<div align='center'>
+    <img src="./images/happy_llm_rocm_training_pipeline_zh.png" alt="图5.4.1 Happy-LLM ROCm 训练路线图" width="95%">
+</div>
+
 <br>
 
 ***

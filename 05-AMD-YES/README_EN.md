@@ -28,6 +28,12 @@ AMD-YES brings together practical project examples built on AMD GPU and ROCm pla
 
 This module is divided into two stages: First, quickly get started with various applications on a single local GPU, then advance to cluster deployment and distributed training. Each project includes complete code and detailed tutorial guidance.
 
+### AMD-YES Learning Path
+
+<div align='center'>
+    <img src="./images/amd_yes_project_overview_en.png" alt="Figure 5.1 AMD-YES project learning path overview" width="95%">
+</div>
+
 ## Project List
 
 ### Local Run (Single GPU)

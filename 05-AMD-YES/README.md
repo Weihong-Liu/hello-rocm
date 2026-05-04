@@ -28,6 +28,12 @@
 
 &emsp;&emsp;本模块分为两个阶段：首先在本地单卡快速上手各类应用，然后进阶到集群部署和分布式训练。每个项目都包含完整的代码和详细的教程指导。
 
+### AMD-YES 项目学习路径
+
+<div align='center'>
+    <img src="./images/amd_yes_project_overview_zh.png" alt="图5.1 AMD-YES 项目学习路径总览" width="95%">
+</div>
+
 ## 项目列表
 
 ### 本地运行（单卡）
