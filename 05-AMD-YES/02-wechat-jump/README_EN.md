@@ -10,6 +10,12 @@
 
 > WeChat Jump Project Link: [*Link*](https://github.com/KMnO4-zx/wechat-jump.git)
 
+### YOLOv10 WeChat Jump Training and Control Loop
+
+<div align='center'>
+    <img src="./images/wechat_jump_yolo_rocm_flow_en.png" alt="Figure 5.2.1 YOLOv10 WeChat Jump training and control loop" width="95%">
+</div>
+
 ***OK, next I will guide you step-by-step to implement the training and usage process for WeChat Jump automation. Let's experience it together!***
 
 ## Step 1: Environment Setup

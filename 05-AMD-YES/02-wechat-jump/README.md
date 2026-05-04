@@ -10,6 +10,12 @@
 
 > 微信跳一跳项目地址：[*Link*](https://github.com/KMnO4-zx/wechat-jump.git)
 
+### YOLOv10 微信跳一跳训练与控制闭环
+
+<div align='center'>
+    <img src="./images/wechat_jump_yolo_rocm_flow_zh.png" alt="图5.2.1 YOLOv10 微信跳一跳训练与控制闭环" width="95%">
+</div>
+
 ***OK，那接下来我将会带领大家亲自动手，一步步实现微信跳一跳自动化的训练和使用过程，让我们一起来体验一下吧~***
 
 ## Step 1: 环境准备

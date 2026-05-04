@@ -11,6 +11,12 @@
 
 > toy-cli project address: [*Link*](https://github.com/KMnO4-zx/toy-cli.git)
 
+### toy-cli Local Agent Call Chain
+
+<div align='center'>
+    <img src="./images/toy_cli_rocm_agent_flow_en.png" alt="Figure 5.1.1 toy-cli local LLM Agent call chain" width="95%">
+</div>
+
 ***OK, next I will guide you through the hands-on process of implementing toy-cli installation and usage step by step. Let's experience it together~***
 
 ## Step 1: Environment Setup

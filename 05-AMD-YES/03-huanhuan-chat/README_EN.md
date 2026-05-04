@@ -16,6 +16,11 @@ Chat-Zhenxuan realizes, starting with "Zhenxuan's Tale" as an entry point, a com
 > *Chat-Zhenxuan model has accumulated 15.6k downloads, ModelScope link:* [*Link*](https://www.modelscope.cn/models/kmno4zx/huanhuan-chat-internlm2)   
 > *Chat-Zhenxuan has accumulated 500 stars, huanhuan-chat project link:* [*Link*](https://github.com/KMnO4-zx/huanhuan-chat.git), xlab-huanhuan-chat project link: [*Link*](https://github.com/KMnO4-zx/xlab-huanhuan.git)  
 
+### Chat-Zhenxuan LoRA Fine-Tuning Pipeline
+
+<div align='center'>
+    <img src="./images/huanhuan_lora_pipeline_en.png" alt="Figure 5.3.1 Chat-Zhenxuan LoRA fine-tuning pipeline" width="95%">
+</div>
 
 ***Alright, next I will guide you through implementing Chat-Zhenxuan's training process step by step. Let's experience it together~***
 

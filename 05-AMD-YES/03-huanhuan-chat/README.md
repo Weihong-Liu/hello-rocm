@@ -16,6 +16,11 @@ Chat-甄嬛，实现了以《甄嬛传》为切入点，打造一套基于小说
 > *Chat-嬛嬛模型累计下载量 15.6k，Modelscope 地址：*[*Link*](https://www.modelscope.cn/models/kmno4zx/huanhuan-chat-internlm2)   
 > *Chat-嬛嬛累计获得 500 star，huahuan-chat 项目地址：*[*Link*](https://github.com/KMnO4-zx/huanhuan-chat.git)，xlab-huanhuan-chat 项目地址：[*Link*](https://github.com/KMnO4-zx/xlab-huanhuan.git)  
 
+### Chat-甄嬛 LoRA 微调流程
+
+<div align='center'>
+    <img src="./images/huanhuan_lora_pipeline_zh.png" alt="图5.3.1 Chat-甄嬛 LoRA 微调流程" width="95%">
+</div>
 
 ***OK，那接下来我将会带领大家亲自动手，一步步实现 Chat-甄嬛 的训练过程，让我们一起来体验一下吧~***
 
