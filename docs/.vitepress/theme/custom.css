@@ -6,6 +6,17 @@
     radial-gradient(circle at top right, rgba(237, 28, 36, 0.045), transparent 22%);
 }
 
+html {
+  font-feature-settings:
+    'cv02' 1,
+    'cv03' 1,
+    'cv04' 1,
+    'cv11' 1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .dark .Layout {
   background:
     radial-gradient(circle at top left, rgba(0, 200, 255, 0.08), transparent 26%),
@@ -34,7 +45,8 @@
 
 .VPNavBarTitle .title {
   font-family: var(--vp-font-family-heading);
-  font-weight: 760;
+  font-size: 0.96rem;
+  font-weight: 720;
   letter-spacing: 0;
 }
 
@@ -45,7 +57,8 @@
   padding: 0 0.95rem !important;
   border-radius: 10px;
   line-height: 1 !important;
-  font-weight: 650;
+  font-size: 0.93rem;
+  font-weight: 620;
   transition:
     color 0.2s ease,
     background-color 0.2s ease,
@@ -184,13 +197,15 @@
 .VPSidebarGroup .title {
   color: var(--vp-c-text-3);
   font-size: 0.76rem;
-  font-weight: 760;
+  font-weight: 680;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
 .VPSidebarItem .text {
-  font-weight: 520;
+  font-size: 0.93rem;
+  font-weight: 500;
+  line-height: 1.45;
 }
 
 .VPSidebarItem .item .link,
@@ -235,6 +250,8 @@
   padding: 0.26rem 0 0.26rem 0.35rem;
   border-left: 2px solid transparent;
   color: var(--vp-c-text-2);
+  font-size: 0.86rem;
+  line-height: 1.45;
   transition:
     color 0.2s ease,
     transform 0.2s ease;
@@ -295,8 +312,9 @@
 }
 
 .vp-doc {
+  color: var(--vp-c-text-1);
   font-size: 16px;
-  line-height: 1.78;
+  line-height: 1.74;
 }
 
 .vp-doc h1,
@@ -312,39 +330,49 @@
 
 .vp-doc h1 {
   margin-bottom: 0.75rem;
-  font-size: clamp(2rem, 3vw, 2.6rem);
-  font-weight: 800;
+  font-size: clamp(2rem, 2.8vw, 2.5rem);
+  font-weight: 760;
+  line-height: 1.16;
 }
 
 .vp-doc h2 {
   margin-top: 3rem;
   margin-bottom: 1rem;
   padding-top: 0.3rem;
-  font-size: 1.55rem;
-  font-weight: 760;
+  font-size: 1.48rem;
+  font-weight: 720;
+  line-height: 1.28;
 }
 
 .vp-doc h3 {
   margin-top: 1.9rem;
   margin-bottom: 0.7rem;
   font-size: 1.16rem;
-  font-weight: 720;
+  font-weight: 680;
+  line-height: 1.36;
 }
 
 .vp-doc h4 {
   margin-top: 1.45rem;
   margin-bottom: 0.55rem;
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 660;
+  line-height: 1.4;
 }
 
 .vp-doc p,
 .vp-doc li {
   color: var(--vp-c-text-1);
+  font-weight: 400;
+  letter-spacing: 0;
 }
 
 .vp-doc p + p {
   margin-top: 0.95rem;
+}
+
+.vp-doc li + li {
+  margin-top: 0.2rem;
 }
 
 .vp-doc hr {
@@ -354,7 +382,7 @@
 }
 
 .vp-doc a {
-  font-weight: 620;
+  font-weight: 560;
   text-decoration: none;
 }
 
@@ -369,14 +397,15 @@
   border-radius: 8px;
   background: var(--vp-c-bg-soft);
   color: var(--vp-c-brand-1);
-  font-size: 0.92em;
+  font-size: 0.9em;
+  font-weight: 500;
 }
 
 .vp-doc div[class*='language-'] {
   --hello-code-header-height: 42px;
   --hello-code-block-padding-y: 0.8rem;
-  --hello-code-line-height: 1.72;
-  --hello-code-font-size: 0.94rem;
+  --hello-code-line-height: 1.68;
+  --hello-code-font-size: 0.93rem;
   --vp-code-line-height: var(--hello-code-line-height);
   --vp-code-font-size: var(--hello-code-font-size);
 
@@ -619,7 +648,7 @@ html[lang^='zh'] .vp-doc div[class*='language-'] > .copy:hover.copied::after {
   max-width: 37ch;
   font-size: clamp(1.05rem, 1.9vw, 1.55rem);
   line-height: 1.22;
-  font-weight: 800;
+  font-weight: 740;
 }
 
 .VPHomeHero .tagline {
@@ -777,7 +806,7 @@ html[lang^='zh'] .vp-doc div[class*='language-'] > .copy:hover.copied::after {
 
 .VPFeature .title {
   font-size: 1rem;
-  font-weight: 720;
+  font-weight: 660;
   line-height: 1.38;
 }
 
