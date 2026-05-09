@@ -373,6 +373,13 @@
 }
 
 .vp-doc div[class*='language-'] {
+  --hello-code-header-height: 42px;
+  --hello-code-block-padding-y: 0.8rem;
+  --hello-code-line-height: 1.72;
+  --hello-code-font-size: 0.94rem;
+  --vp-code-line-height: var(--hello-code-line-height);
+  --vp-code-font-size: var(--hello-code-font-size);
+
   margin: 1.3rem 0 1.7rem;
   overflow: hidden;
   border: 1px solid var(--vp-c-divider-light);
@@ -386,7 +393,7 @@
 
 .vp-doc div[class*='language-']::before {
   display: block;
-  height: 42px;
+  height: var(--hello-code-header-height);
   border-bottom: 1px solid var(--vp-c-divider-light);
   background:
     radial-gradient(circle at 18px 21px, var(--amd-accent) 0 4px, transparent 4.5px),
@@ -396,9 +403,20 @@
 }
 
 .vp-doc div[class*='language-'] pre {
-  padding: 0.8rem 1.15rem 1rem;
-  font-size: 0.94rem;
-  line-height: 1.72;
+  padding: var(--hello-code-block-padding-y) 0 1rem;
+  font-size: var(--vp-code-font-size);
+  line-height: var(--vp-code-line-height);
+}
+
+.vp-doc div[class*='language-'].line-numbers-mode {
+  padding-left: 44px;
+}
+
+.vp-doc div[class*='language-'] .line-numbers-wrapper {
+  width: 44px;
+  padding-top: calc(var(--hello-code-header-height) + var(--hello-code-block-padding-y));
+  font-size: var(--vp-code-font-size);
+  line-height: var(--vp-code-line-height);
 }
 
 .vp-doc div[class*='language-'] code {
