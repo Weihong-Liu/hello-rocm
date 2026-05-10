@@ -1,0 +1,1 @@
+const r="/hello-rocm/images/03-infra/handwrite-rocm-operator/grid_block_thread_model.png",o="/hello-rocm/images/03-infra/handwrite-rocm-operator/hip_thread_addressing.png",a="/hello-rocm/images/03-infra/handwrite-rocm-operator/gpu_memory_hierarchy.png";export{r as _,o as a,a as b};
