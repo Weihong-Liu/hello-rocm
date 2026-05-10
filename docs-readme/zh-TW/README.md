@@ -31,7 +31,17 @@
 
 &emsp;&emsp;**項目的主要內容就是教程，讓更多的學生和未來的從業者了解和熟悉 AMD ROCm 的使用方法！任何人都可以提出 issue 或是提交 PR，共同構建維護這個項目。**
 
-> &emsp;&emsp;***學習建議：建議先完成 [00-Environment](../../00-Environment/README.md) 中的環境安裝（ROCm + PyTorch + uv），再學習部署與微調，最後探索 Infra 算子優化。初學者可在環境就緒後從 LM Studio 或 vLLM 部署開始。***
+> &emsp;&emsp;***學習建議：建議先完成 [00-Environment](../../docs/zh/00-environment/index.md) 中的環境安裝（ROCm + PyTorch + uv），再學習部署與微調，最後探索 Infra 算子優化。初學者可在環境就緒後從 LM Studio 或 vLLM 部署開始。***
+
+### hello-rocm Skill：把本項目裝進你的 AI 助手
+
+&emsp;&emsp;如果你使用支援 Skills、Rules 或 Agent 配置的 AI 編程工具，可以直接使用本項目內置的 **hello-rocm Skill**。它會根據本倉庫的目錄結構、Reference 索引、GPU 架構表、部署教程和排障清單，為你定位到具體文檔與官方鏈接。
+
+```text
+請使用當前倉庫的 src/hello-rocm-skill 作為 hello-rocm Skill；如果你的工具支援 Skills、Rules 或 Agent 配置，請把它安裝或載入到合適位置（例如 .claude/skills、.cursor/skills 或 .agents/skills），然後根據該 Skill 幫我學習、部署和排查 AMD ROCm。
+```
+
+&emsp;&emsp;更多說明見 [hello-rocm Skill 使用指南](../../docs/zh/04-references/index.md#hello-rocm-skill)。
 
 ### 最新動態
 
@@ -44,7 +54,7 @@
 <p align="center">
   <strong>✨ 主流大模型：環境配置 · 多框架推理 · 微調實踐 ✨</strong><br>
   <em>ROCm 統一環境安裝（Windows / Ubuntu）+ ROCm 7+ · 按模型分目錄教程（持續擴充）</em><br>
- <a href="../../00-Environment/README.md">00-環境安裝教程</a> 
+ <a href="../../docs/zh/00-environment/index.md">00-環境安裝教程</a> 
 </p>
 
 <table align="center" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border: none !important;">
@@ -54,14 +64,14 @@
   </tr>
   <tr>
     <td valign="top" width="50%" style="border: none !important;">
-      • <a href="../../01-Deploy/models/Qwen3/lm-studio-rocm7-deploy.md">LM Studio部署</a><br>
-      • <a href="../../01-Deploy/models/Qwen3/vllm-rocm7-deploy.md">vLLM部署</a><br>
-      • <a href="../../01-Deploy/models/Qwen3/ollama-rocm7-deploy.md">Ollama部署</a><br>
-      • <a href="../../01-Deploy/models/Qwen3/llamacpp-rocm7-deploy.md">llama.cpp部署</a><br>
+      • <a href="../../docs/zh/01-deploy/qwen3/lm-studio-rocm7-deploy.md">LM Studio部署</a><br>
+      • <a href="../../docs/zh/01-deploy/qwen3/vllm-rocm7-deploy.md">vLLM部署</a><br>
+      • <a href="../../docs/zh/01-deploy/qwen3/ollama-rocm7-deploy.md">Ollama部署</a><br>
+      • <a href="../../docs/zh/01-deploy/qwen3/llamacpp-rocm7-deploy.md">llama.cpp部署</a><br>
     </td>
     <td valign="top" width="50%" style="border: none !important;">
-      • <a href="../../02-Fine-tune/models/Qwen3/01-Qwen3-0.6B-LoRA及SwanLab可視化記錄.md">Qwen3-0.6B LoRA微調</a><br>
-      • <a href="../../02-Fine-tune/models/Qwen3/01-Qwen3-8B-LoRA.ipynb">Qwen3-8B LoRA微調</a><br>
+      • <a href="../../docs/zh/02-fine-tune/qwen3/qwen3-0.6b-lora-swanlab.md">Qwen3-0.6B LoRA微調</a><br>
+      • <a href="../../src/fine-tune/models/qwen3/01-Qwen3-8B-LoRA.ipynb">Qwen3-8B LoRA微調</a><br>
     </td>
   </tr>
   <tr>
@@ -69,14 +79,14 @@
   </tr>
   <tr>
     <td valign="top" width="50%" style="border: none !important;">
-      • <a href="../../01-Deploy/models/Gemma4/gemma4_model.md">Gemma 4 模型介紹</a><br>
-      • <a href="../../01-Deploy/models/Gemma4/lm-studio-rocm7-deploy.md">LM Studio部署</a><br>
-      • <a href="../../01-Deploy/models/Gemma4/vllm-rocm7-deploy.md">vLLM部署</a><br>
-      • <a href="../../01-Deploy/models/Gemma4/ollama-rocm7-deploy.md">Ollama部署</a><br>
-      • <a href="../../01-Deploy/models/Gemma4/llamacpp-rocm7-deploy.md">llama.cpp部署</a><br>
+      • <a href="../../docs/zh/01-deploy/gemma4/gemma4_model.md">Gemma 4 模型介紹</a><br>
+      • <a href="../../docs/zh/01-deploy/gemma4/lm-studio-rocm7-deploy.md">LM Studio部署</a><br>
+      • <a href="../../docs/zh/01-deploy/gemma4/vllm-rocm7-deploy.md">vLLM部署</a><br>
+      • <a href="../../docs/zh/01-deploy/gemma4/ollama-rocm7-deploy.md">Ollama部署</a><br>
+      • <a href="../../docs/zh/01-deploy/gemma4/llamacpp-rocm7-deploy.md">llama.cpp部署</a><br>
     </td>
     <td valign="top" width="50%" style="border: none !important;">
-      • <a href="../../02-Fine-tune/models/Gemma4/01-Gemma4-E4B-LoRA及SwanLab可視化記錄.ipynb">Gemma4 - E4B LoRA微調（基於TRL）</a><br>
+      • <a href="../../src/fine-tune/models/gemma4/01-Gemma4-E4B-LoRA及SwanLab可视化记录.ipynb">Gemma4 - E4B LoRA微調（基於TRL）</a><br>
     </td>
   </tr>
 </table>
@@ -127,13 +137,13 @@ hello-rocm/
 <p align="center">
   <strong>🛠️ ROCm 基礎環境安裝與配置</strong><br>
   <em>統一環境基線 · ROCm 7.12.0 · Windows / Ubuntu · uv + PyTorch</em><br>
-  📖 <strong><a href="../../00-Environment/README.md">Getting Started with ROCm Environment</a></strong>
+  📖 <strong><a href="../../docs/zh/00-environment/index.md">Getting Started with ROCm Environment</a></strong>
 </p>
 
 <table align="center" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border: none !important;">
   <tr>
     <td valign="top" width="50%" style="border: none !important;" align="center">
-      • <a href="../../00-Environment/rocm-gpu-architecture-table.md">GPU 架構與 pip 索引對照表</a><br>
+      • <a href="../../docs/zh/00-environment/rocm-gpu-architecture-table.md">GPU 架構與 pip 索引對照表</a><br>
       • Windows 11 安裝、驅動與安全項前置說明<br>
       • Ubuntu 24.04 安裝（uv 方式與備選一鍵腳本）<br>
       • 安裝校驗、卸載與切換其他 GPU 架構
@@ -146,7 +156,7 @@ hello-rocm/
 <p align="center">
   <strong>🚀 ROCm 大模型部署實踐</strong><br>
   <em>零基礎快速上手 AMD GPU 大模型部署</em><br>
-  📖 <strong><a href="../../01-Deploy/README.md">Getting Started with ROCm Deploy</a></strong>
+  📖 <strong><a href="../../docs/zh/01-deploy/index.md">Getting Started with ROCm Deploy</a></strong>
 </p>
 
 <table align="center" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border: none !important;">
@@ -166,7 +176,7 @@ hello-rocm/
 <p align="center">
   <strong>🔧 ROCm 大模型微調實踐</strong><br>
   <em>在 AMD GPU 上進行高效模型微調</em><br>
-  📖 <strong><a href="../../02-Fine-tune/README.md">Getting Started with ROCm Fine-tune</a></strong>
+  📖 <strong><a href="../../docs/zh/02-fine-tune/index.md">Getting Started with ROCm Fine-tune</a></strong>
 </p>
 
 <table align="center" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border: none !important;">
@@ -184,7 +194,7 @@ hello-rocm/
 <p align="center">
   <strong>⚙️ ROCm 算子優化實踐</strong><br>
   <em>CUDA 到 ROCm 的遷移與優化指南</em><br>
-  📖 <strong><a href="../../03-Infra/README.md">Getting Started with ROCm Infra</a></strong>
+  📖 <strong><a href="../../docs/zh/03-infra/index.md">Getting Started with ROCm Infra</a></strong>
 </p>
 
 <table align="center" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border: none !important;">
@@ -203,7 +213,7 @@ hello-rocm/
 <p align="center">
   <strong>📚 ROCm 優質參考資料</strong><br>
   <em>精選的 AMD 官方與社區資源</em><br>
-  📖 <strong><a href="../../04-References/README.md">ROCm References</a></strong>
+  📖 <strong><a href="../../docs/zh/04-references/index.md">ROCm References</a></strong>
 </p>
 
 <table align="center" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border: none !important;">
@@ -212,6 +222,8 @@ hello-rocm/
       • <a href="https://rocm.docs.amd.com/">ROCm 官方文檔</a><br>
       • <a href="https://github.com/amd">AMD GitHub</a><br>
       • <a href="https://rocm.docs.amd.com/en/latest/about/release-notes.html">ROCm Release Notes</a><br>
+      • <a href="../../docs/zh/04-references/index.md#amd-gpu-架构白皮书">AMD GPU 架構白皮書（CDNA / RDNA）</a><br>
+      • <a href="../../docs/zh/04-references/index.md#框架与推理服务rocm-快速安装入口">框架與推理服務 ROCm 快速安裝入口</a><br>
       • 相關新聞
     </td>
   </tr>
@@ -222,14 +234,14 @@ hello-rocm/
 <p align="center">
   <strong>✨ AMD 實踐案例集合</strong><br>
   <em>社區驅動的 AMD GPU 項目實踐</em><br>
-  📖 <strong><a href="../../05-AMD-YES/README.md">Getting Started with ROCm AMD-YES</a></strong>
+  📖 <strong><a href="../../docs/zh/05-amd-yes/index.md">Getting Started with ROCm AMD-YES</a></strong>
 </p>
 
 <table align="center" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border: none !important;">
   <tr>
     <td valign="top" width="50%" style="border: none !important;" align="center">
       • toy-cli - LLM 輕量化終端助手<br>
-      • YOLOv10 微信跳一跳 - 遊戲 AI 實戰<br>
+      • YOLOv10 微信跳一跳 - 遊戲 AI 實戰（在 ROCm 環境下訓練並使用 yolov10）<br>
       • Chat-甄嬛 - 古風對話大模型<br>
       • 智能旅行規劃助手 - HelloAgents Agent 實戰<br>
       • happy-llm - 分布式大模型訓練
@@ -248,16 +260,21 @@ hello-rocm/
 
 &emsp;&emsp;參與前請先閱讀 **[規範指南](../../規範指南.md)**（目錄、命名、配圖與文檔結構與 **Qwen3** 等教程對齊），再閱讀 **[CONTRIBUTING.md](../../CONTRIBUTING.md)**（Issue / PR 流程與模型專項目錄約定）。
 
+&emsp;&emsp;如果你在使用 ROCm、部署模型或閱讀教程時遇到故障排查與常見問題，也歡迎加入我們的 **[社區討論](https://zcnijjcepfie.feishu.cn/docx/R2a4dDRUBoo1R2x7mOjcPpPPnOO)**，和社區一起補充經驗、反饋問題、完善教程。
+
 &emsp;&emsp;想要深度參與的同學可以聯繫我們，我們會將你加入到項目的維護者中。
 
 ## 致謝
 ### 核心貢獻者
 
 
-- [宋志學(不要蔥姜蒜)-項目負責人](https://github.com/KMnO4-zx) （Datawhale成員）
+- [宋志學(不要蔥薑蒜)-項目負責人](https://github.com/KMnO4-zx) （Datawhale成員，self-llm、happy-llm 項目負責人）
 - [陳榆-項目負責人](https://github.com/lucachen) （內容創作者-谷歌開發者機器學習技術專家）
+- [陳思州-項目成員](https://github.com/jjyaoao) （Datawhale 成員，hello-agents 項目負責人）
 - [潘嘉航-項目成員](https://github.com/amdjiahangpan) （內容創作者-AMD軟體工程師）
 - [劉偉鴻-項目成員](https://github.com/Weihong-Liu) （Datawhale成員）
+- [郝東波-項目成員](https://github.com/wlkq151172) （Datawhale成員）
+- [柯慕靈-項目成員](https://github.com/1985312383)（Datawhale成員）
 > 註：歡迎更多貢獻者加入！
 
 ### 其他

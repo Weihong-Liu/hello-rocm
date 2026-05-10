@@ -30,7 +30,17 @@
 
 &emsp;&emsp;**このプロジェクトは主にチュートリアル**であり、学生や将来の実務者がAMD ROCmを体系的に学べるようにするものです。**どなたでもIssueの作成やプルリクエストの送信を歓迎します**。プロジェクトを共に成長させ、維持していきましょう。
 
-> &emsp;&emsp;***学習パス: まず[00-環境設定](../../00-Environment/README_EN.md)（ROCm + PyTorch + **uv**）を完了し、次にデプロイとファインチューニング、最後にインフラ/オペレーターレベルのトピックに進みます。環境が動作したら、LM StudioまたはvLLMから始めるのが良いでしょう。***
+> &emsp;&emsp;***学習パス: まず[00-環境設定](../../docs/en/00-environment/index.md)（ROCm + PyTorch + **uv**）を完了し、次にデプロイとファインチューニング、最後にインフラ/オペレーターレベルのトピックに進みます。環境が動作したら、LM StudioまたはvLLMから始めるのが良いでしょう。***
+
+### hello-rocm Skill：AIアシスタントで本プロジェクトを使う
+
+&emsp;&emsp;Skills、Rules、Agent設定をサポートするAIコーディングツールを使っている場合は、内蔵の **hello-rocm Skill** を利用できます。このSkillは、リポジトリ構成、Reference索引、GPUアーキテクチャ表、デプロイ手順、トラブルシューティング一覧をもとに、適切なドキュメントと公式リンクへ案内します。
+
+```text
+Use src/hello-rocm-skill in the current repository as the hello-rocm Skill. If your tool supports Skills, Rules, or Agent configuration, install or load it in the appropriate place, such as .claude/skills, .cursor/skills, or .agents/skills, then use that Skill to help me learn, deploy, and troubleshoot AMD ROCm.
+```
+
+&emsp;&emsp;詳しくは [hello-rocm Skill guide](../../docs/en/04-references/index.md#hello-rocm-skill) を参照してください。
 
 ### 最新情報
 
@@ -43,7 +53,7 @@
 <p align="center">
   <strong>✨ 主要LLM: 環境設定 · マルチフレームワーク推論 · ファインチューニング ✨</strong><br>
   <em>統一ROCmセットアップ（Windows / Ubuntu）+ ROCm 7+ · モデル別チュートリアル（随時追加）</em><br>
- <a href="../../00-Environment/README_EN.md">00 — 環境設定</a>
+ <a href="../../docs/en/00-environment/index.md">00 — 環境設定</a>
 </p>
 
 <table align="center" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border: none !important;">
@@ -53,14 +63,14 @@
   </tr>
   <tr>
     <td valign="top" width="50%" style="border: none !important;">
-      • <a href="../../01-Deploy/models/Qwen3/lm-studio-rocm7-deploy.md">LM Studio</a><br>
-      • <a href="../../01-Deploy/models/Qwen3/vllm-rocm7-deploy.md">vLLM</a><br>
-      • <a href="../../01-Deploy/models/Qwen3/ollama-rocm7-deploy.md">Ollama</a><br>
-      • <a href="../../01-Deploy/models/Qwen3/llamacpp-rocm7-deploy.md">llama.cpp</a><br>
+      • <a href="../../docs/en/01-deploy/qwen3/lm-studio-rocm7-deploy.md">LM Studio</a><br>
+      • <a href="../../docs/en/01-deploy/qwen3/vllm-rocm7-deploy.md">vLLM</a><br>
+      • <a href="../../docs/en/01-deploy/qwen3/ollama-rocm7-deploy.md">Ollama</a><br>
+      • <a href="../../docs/en/01-deploy/qwen3/llamacpp-rocm7-deploy.md">llama.cpp</a><br>
     </td>
     <td valign="top" width="50%" style="border: none !important;">
-      • <a href="../../02-Fine-tune/models/Qwen3/01-Qwen3-0.6B-LoRA及SwanLab可视化记录.md">Qwen3-0.6B LoRA + SwanLab</a><br>
-      • <a href="../../02-Fine-tune/models/Qwen3/01-Qwen3-8B-LoRA.ipynb">Qwen3-8B LoRA (Notebook)</a><br>
+      • <a href="../../docs/en/02-fine-tune/qwen3/qwen3-0.6b-lora-swanlab.md">Qwen3-0.6B LoRA + SwanLab</a><br>
+      • <a href="../../src/fine-tune/models/qwen3/01-Qwen3-8B-LoRA.ipynb">Qwen3-8B LoRA (Notebook)</a><br>
     </td>
   </tr>
   <tr>
@@ -68,14 +78,14 @@
   </tr>
   <tr>
     <td valign="top" width="50%" style="border: none !important;">
-      • <a href="../../01-Deploy/models/Gemma4/gemma4_model.md">Gemma 4 モデル概要</a><br>
-      • <a href="../../01-Deploy/models/Gemma4/lm-studio-rocm7-deploy.md">LM Studio</a><br>
-      • <a href="../../01-Deploy/models/Gemma4/vllm-rocm7-deploy.md">vLLM</a><br>
-      • <a href="../../01-Deploy/models/Gemma4/ollama-rocm7-deploy.md">Ollama</a><br>
-      • <a href="../../01-Deploy/models/Gemma4/llamacpp-rocm7-deploy.md">llama.cpp</a><br>
+      • <a href="../../docs/en/01-deploy/gemma4/gemma4_model.md">Gemma 4 モデル概要</a><br>
+      • <a href="../../docs/en/01-deploy/gemma4/lm-studio-rocm7-deploy.md">LM Studio</a><br>
+      • <a href="../../docs/en/01-deploy/gemma4/vllm-rocm7-deploy.md">vLLM</a><br>
+      • <a href="../../docs/en/01-deploy/gemma4/ollama-rocm7-deploy.md">Ollama</a><br>
+      • <a href="../../docs/en/01-deploy/gemma4/llamacpp-rocm7-deploy.md">llama.cpp</a><br>
     </td>
     <td valign="top" width="50%" style="border: none !important;">
-      • <a href="../../02-Fine-tune/models/Gemma4/01-Gemma4-E4B-LoRA及SwanLab可视化记录.ipynb">Gemma4 E4B LoRA ファインチューニング (TRL, Notebook)</a><br>
+      • <a href="../../src/fine-tune/models/gemma4/01-Gemma4-E4B-LoRA及SwanLab可视化记录.ipynb">Gemma4 E4B LoRA ファインチューニング (TRL, Notebook)</a><br>
     </td>
   </tr>
 </table>
@@ -121,13 +131,13 @@ hello-rocm/
 <p align="center">
   <strong>🛠️ ROCm環境のインストールと設定</strong><br>
   <em>単一ベースライン · ROCm 7.12.0 · Windows / Ubuntu · uv + PyTorch</em><br>
-  📖 <strong><a href="../../00-Environment/README_EN.md">ROCm環境入門</a></strong>
+  📖 <strong><a href="../../docs/en/00-environment/index.md">ROCm環境入門</a></strong>
 </p>
 
 <table align="center" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border: none !important;">
   <tr>
     <td valign="top" width="50%" style="border: none !important;" align="center">
-      • <a href="../../00-Environment/rocm-gpu-architecture-table.md">GPUアーキテクチャとpipインデックス対応表</a><br>
+      • <a href="../../docs/en/00-environment/rocm-gpu-architecture-table.md">GPUアーキテクチャとpipインデックス対応表</a><br>
       • Windows 11：ドライバ、セキュリティ前提条件、インストールフロー<br>
       • Ubuntu 24.04：uvベースのインストールとオプションの統合インストーラスクリプト<br>
       • 検証、アンインストール、GPUターゲットの切り替え
@@ -140,7 +150,7 @@ hello-rocm/
 <p align="center">
   <strong>🚀 ROCm LLMデプロイ</strong><br>
   <em>ゼロからAMD GPU上でモデルを実行するまで</em><br>
-  📖 <strong><a href="../../01-Deploy/README_EN.md">ROCmデプロイ入門</a></strong>
+  📖 <strong><a href="../../docs/en/01-deploy/index.md">ROCmデプロイ入門</a></strong>
 </p>
 
 <table align="center" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border: none !important;">
@@ -160,7 +170,7 @@ hello-rocm/
 <p align="center">
   <strong>🔧 ROCm LLMファインチューニング</strong><br>
   <em>AMD GPU上での効率的なファインチューニング</em><br>
-  📖 <strong><a href="../../02-Fine-tune/README.md">ROCmファインチューニング入門</a></strong>
+  📖 <strong><a href="../../docs/en/02-fine-tune/index.md">ROCmファインチューニング入門</a></strong>
 </p>
 
 <table align="center" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border: none !important;">
@@ -178,7 +188,7 @@ hello-rocm/
 <p align="center">
   <strong>⚙️ ROCmインフラとオペレーター</strong><br>
   <em>ハードウェア/ソフトウェアスタックからHIPレベルの実践まで</em><br>
-  📖 <strong><a href="../../03-Infra/README.md">ROCmインフラ入門</a></strong>
+  📖 <strong><a href="../../docs/en/03-infra/index.md">ROCmインフラ入門</a></strong>
 </p>
 
 <table align="center" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border: none !important;">
@@ -197,7 +207,7 @@ hello-rocm/
 <p align="center">
   <strong>📚 ROCmリファレンス</strong><br>
   <em>公式およびコミュニティリソース</em><br>
-  📖 <strong><a href="../../04-References/README.md">ROCmリファレンス</a></strong>
+  📖 <strong><a href="../../docs/en/04-references/index.md">ROCmリファレンス</a></strong>
 </p>
 
 <table align="center" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border: none !important;">
@@ -206,6 +216,8 @@ hello-rocm/
       • <a href="https://rocm.docs.amd.com/">ROCm公式ドキュメント</a><br>
       • <a href="https://github.com/amd">AMD on GitHub</a><br>
       • <a href="https://rocm.docs.amd.com/en/latest/about/release-notes.html">ROCmリリースノート</a><br>
+      • <a href="../../docs/en/04-references/index.md#amd-gpu-architecture-whitepapers">AMD GPUアーキテクチャ白書（CDNA / RDNA）</a><br>
+      • <a href="../../docs/en/04-references/index.md#frameworks-and-inference-services-rocm-quick-install-links">フレームワークと推論サービスのROCmクイックインストールリンク</a><br>
       • 関連ニュース
     </td>
   </tr>
@@ -216,14 +228,14 @@ hello-rocm/
 <p align="center">
   <strong>✨ AMDプロジェクト紹介</strong><br>
   <em>コミュニティ主導のAMD GPU活用例</em><br>
-  📖 <strong><a href="../../05-AMD-YES/README.md">ROCm AMD-YES入門</a></strong>
+  📖 <strong><a href="../../docs/en/05-amd-yes/index.md">ROCm AMD-YES入門</a></strong>
 </p>
 
 <table align="center" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border: none !important;">
   <tr>
     <td valign="top" width="50%" style="border: none !important;" align="center">
 • toy-cli — 軽量ターミナルLLMアシスタント<br>
-      • WeChat「ジャンプジャンプ」とYOLOv10 — ゲームAIデモ<br>
+      • WeChat「ジャンプジャンプ」とYOLOv10 — ゲームAI実戦（ROCm環境でyolov10をトレーニング・使用）<br>
       • Chat-甄嬛 — 時代劇風対話モデル<br>
       • 旅行プランナー — HelloAgentsエージェントデモ<br>
       • happy-llm — 分散LLMトレーニング
@@ -242,16 +254,21 @@ hello-rocm/
 
 &emsp;&emsp;まずは **[規範指南](../../規範指南.md)**（構造、命名、画像 — Qwen3などのチュートリアルに準拠）をお読みいただき、次に **[CONTRIBUTING.md](../../CONTRIBUTING.md)**（Issue、PR、モデルごとのディレクトリ規約）をご確認ください。
 
+&emsp;&emsp;ROCm の使用、モデルのデプロイ、チュートリアルの閲覧中にトラブルシューティングやFAQに関する問題があれば、**[コミュニティディスカッション](https://zcnijjcepfie.feishu.cn/docx/R2a4dDRUBoo1R2x7mOjcPpPPnOO)** にもぜひ参加してください。経験の共有、問題の報告、チュートリアル改善をコミュニティと一緒に進められます。
+
 &emsp;&emsp;長期的にリポジトリのメンテナンスにご協力いただける方は、ご連絡ください。メンテナーとして追加いたします。
 
 ## 謝辞
 
 ### 主要コントリビューター
 
-- [Zhixue Song (不要葱姜蒜) — プロジェクトリーダー](https://github.com/KMnO4-zx) (Datawhale)
-- [Yu Chen — プロジェクトリーダー](https://github.com/lucachen) (コンテンツ — Google Developer Expert in Machine Learning)
-- [Jiahang Pan — コントリビューター](https://github.com/amdjiahangpan) (コンテンツ — AMDソフトウェアエンジニア)
-- [Weihong Liu — コントリビューター](https://github.com/Weihong-Liu) (Datawhale)
+- [Zhixue Song (不要葱姜蒜) — プロジェクトリーダー](https://github.com/KMnO4-zx) (Datawhaleメンバー、self-llm / happy-llm プロジェクトリーダー)
+- [Yu Chen — プロジェクトリーダー](https://github.com/lucachen) (コンテンツクリエイター、Google Developer Expert in Machine Learning)
+- [Sizhou Chen — コントリビューター](https://github.com/jjyaoao) (Datawhaleメンバー、hello-agents プロジェクトリーダー)
+- [Jiahang Pan — コントリビューター](https://github.com/amdjiahangpan) (コンテンツクリエイター、AMDソフトウェアエンジニア)
+- [Weihong Liu — コントリビューター](https://github.com/Weihong-Liu) (Datawhaleメンバー)
+- [Dongbo Hao — コントリビューター](https://github.com/wlkq151172) (Datawhaleメンバー)
+- [Muling Ke — コントリビューター](https://github.com/1985312383) (Datawhaleメンバー)
 
 > さらなるコントリビューターを常に歓迎します。
 

@@ -31,7 +31,17 @@
 
 &emsp;&emsp;**Dieses Projekt besteht hauptsächlich aus Tutorials**, damit Studierende und zukünftige Praktiker AMD ROCm strukturiert erlernen können. **Jeder ist herzlich eingeladen, Issues zu eröffnen oder Pull Requests einzureichen**, um das Projekt gemeinsam zu erweitern und zu pflegen.
 
-> &emsp;&emsp;***Lernpfad: Zuerst [00-Umgebung](../../00-Environment/README_EN.md) abschließen (ROCm + PyTorch + **uv**), dann Bereitstellung und Feinabstimmung, und schließlich Infra-/Operator-Themen. Sobald Ihre Umgebung funktioniert, ist LM Studio oder vLLM ein guter Startpunkt.***
+> &emsp;&emsp;***Lernpfad: Zuerst [00-Umgebung](../../docs/en/00-environment/index.md) abschließen (ROCm + PyTorch + **uv**), dann Bereitstellung und Feinabstimmung, und schließlich Infra-/Operator-Themen. Sobald Ihre Umgebung funktioniert, ist LM Studio oder vLLM ein guter Startpunkt.***
+
+### hello-rocm Skill: dieses Projekt im KI-Assistenten nutzen
+
+&emsp;&emsp;Wenn du ein KI-Coding-Tool verwendest, das Skills, Rules oder Agent-Konfigurationen unterstützt, kannst du den integrierten **hello-rocm Skill** nutzen. Der Skill verwendet die Repository-Struktur, den Reference-Index, die GPU-Architekturtabelle, Deployment-Tutorials und die Troubleshooting-Liste, um dich zum passenden Dokument und offiziellen Link zu führen.
+
+```text
+Use src/hello-rocm-skill in the current repository as the hello-rocm Skill. If your tool supports Skills, Rules, or Agent configuration, install or load it in the appropriate place, such as .claude/skills, .cursor/skills, or .agents/skills, then use that Skill to help me learn, deploy, and troubleshoot AMD ROCm.
+```
+
+&emsp;&emsp;Siehe den [hello-rocm Skill guide](../../docs/en/04-references/index.md#hello-rocm-skill).
 
 ### Neueste Updates
 
@@ -44,7 +54,7 @@
 <p align="center">
   <strong>✨ Mainstream-LLMs: Umgebung · Multi-Framework-Inferenz · Feinabstimmung ✨</strong><br>
   <em>Einheitliche ROCm-Einrichtung (Windows / Ubuntu) + ROCm 7+ · Modellspezifische Tutorials (wachsend)</em><br>
- <a href="../../00-Environment/README_EN.md">00 — Umgebungseinrichtung</a>
+ <a href="../../docs/en/00-environment/index.md">00 — Umgebungseinrichtung</a>
 </p>
 
 <table align="center" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border: none !important;">
@@ -54,14 +64,14 @@
   </tr>
   <tr>
     <td valign="top" width="50%" style="border: none !important;">
-      • <a href="../../01-Deploy/models/Qwen3/lm-studio-rocm7-deploy.md">LM Studio</a><br>
-      • <a href="../../01-Deploy/models/Qwen3/vllm-rocm7-deploy.md">vLLM</a><br>
-      • <a href="../../01-Deploy/models/Qwen3/ollama-rocm7-deploy.md">Ollama</a><br>
-      • <a href="../../01-Deploy/models/Qwen3/llamacpp-rocm7-deploy.md">llama.cpp</a><br>
+      • <a href="../../docs/en/01-deploy/qwen3/lm-studio-rocm7-deploy.md">LM Studio</a><br>
+      • <a href="../../docs/en/01-deploy/qwen3/vllm-rocm7-deploy.md">vLLM</a><br>
+      • <a href="../../docs/en/01-deploy/qwen3/ollama-rocm7-deploy.md">Ollama</a><br>
+      • <a href="../../docs/en/01-deploy/qwen3/llamacpp-rocm7-deploy.md">llama.cpp</a><br>
     </td>
     <td valign="top" width="50%" style="border: none !important;">
-      • <a href="../../02-Fine-tune/models/Qwen3/01-Qwen3-0.6B-LoRA及SwanLab可视化记录.md">Qwen3-0.6B LoRA + SwanLab</a><br>
-      • <a href="../../02-Fine-tune/models/Qwen3/01-Qwen3-8B-LoRA.ipynb">Qwen3-8B LoRA (Notebook)</a><br>
+      • <a href="../../docs/en/02-fine-tune/qwen3/qwen3-0.6b-lora-swanlab.md">Qwen3-0.6B LoRA + SwanLab</a><br>
+      • <a href="../../src/fine-tune/models/qwen3/01-Qwen3-8B-LoRA.ipynb">Qwen3-8B LoRA (Notebook)</a><br>
     </td>
   </tr>
   <tr>
@@ -69,14 +79,14 @@
   </tr>
   <tr>
     <td valign="top" width="50%" style="border: none !important;">
-      • <a href="../../01-Deploy/models/Gemma4/gemma4_model.md">Gemma 4 Modellübersicht</a><br>
-      • <a href="../../01-Deploy/models/Gemma4/lm-studio-rocm7-deploy.md">LM Studio</a><br>
-      • <a href="../../01-Deploy/models/Gemma4/vllm-rocm7-deploy.md">vLLM</a><br>
-      • <a href="../../01-Deploy/models/Gemma4/ollama-rocm7-deploy.md">Ollama</a><br>
-      • <a href="../../01-Deploy/models/Gemma4/llamacpp-rocm7-deploy.md">llama.cpp</a><br>
+      • <a href="../../docs/en/01-deploy/gemma4/gemma4_model.md">Gemma 4 Modellübersicht</a><br>
+      • <a href="../../docs/en/01-deploy/gemma4/lm-studio-rocm7-deploy.md">LM Studio</a><br>
+      • <a href="../../docs/en/01-deploy/gemma4/vllm-rocm7-deploy.md">vLLM</a><br>
+      • <a href="../../docs/en/01-deploy/gemma4/ollama-rocm7-deploy.md">Ollama</a><br>
+      • <a href="../../docs/en/01-deploy/gemma4/llamacpp-rocm7-deploy.md">llama.cpp</a><br>
     </td>
     <td valign="top" width="50%" style="border: none !important;">
-      • <a href="../../02-Fine-tune/models/Gemma4/01-Gemma4-E4B-LoRA及SwanLab可视化记录.ipynb">Gemma4 E4B LoRA-Feinabstimmung (TRL, Notebook)</a><br>
+      • <a href="../../src/fine-tune/models/gemma4/01-Gemma4-E4B-LoRA及SwanLab可视化记录.ipynb">Gemma4 E4B LoRA-Feinabstimmung (TRL, Notebook)</a><br>
     </td>
   </tr>
 </table>
@@ -122,13 +132,13 @@ hello-rocm/
 <p align="center">
   <strong>🛠️ ROCm-Umgebungsinstallation & -Konfiguration</strong><br>
   <em>Einheitliche Basis · ROCm 7.12.0 · Windows / Ubuntu · uv + PyTorch</em><br>
-  📖 <strong><a href="../../00-Environment/README_DE.md">Erste Schritte mit der ROCm-Umgebung</a></strong>
+  📖 <strong><a href="../../docs/en/00-environment/index.md">Erste Schritte mit der ROCm-Umgebung</a></strong>
 </p>
 
 <table align="center" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border: none !important;">
   <tr>
     <td valign="top" width="50%" style="border: none !important;" align="center">
-      • <a href="../../00-Environment/rocm-gpu-architecture-table.md">GPU-Architektur & pip-Index-Zuordnung</a><br>
+      • <a href="../../docs/en/00-environment/rocm-gpu-architecture-table.md">GPU-Architektur & pip-Index-Zuordnung</a><br>
       • Windows 11: Treiber, Sicherheitsvoraussetzungen, Installationsablauf<br>
       • Ubuntu 24.04: uv-basierte Installation und optionales einheitliches Installationsskript<br>
       • Überprüfung, Deinstallation und Wechsel der GPU-Ziele
@@ -141,7 +151,7 @@ hello-rocm/
 <p align="center">
   <strong>🚀 ROCm-LLM-Deployment</strong><br>
   <em>Von null zu einem laufenden Modell auf AMD-GPUs</em><br>
-  📖 <strong><a href="../../01-Deploy/README_DE.md">Erste Schritte mit ROCm-Deployment</a></strong>
+  📖 <strong><a href="../../docs/en/01-deploy/index.md">Erste Schritte mit ROCm-Deployment</a></strong>
 </p>
 
 <table align="center" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border: none !important;">
@@ -161,7 +171,7 @@ hello-rocm/
 <p align="center">
   <strong>🔧 ROCm-LLM-Feintuning</strong><br>
   <em>Effizientes Feintuning auf AMD-GPUs</em><br>
-  📖 <strong><a href="../../02-Fine-tune/README.md">Erste Schritte mit ROCm-Feintuning</a></strong>
+  📖 <strong><a href="../../docs/en/02-fine-tune/index.md">Erste Schritte mit ROCm-Feintuning</a></strong>
 </p>
 
 <table align="center" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border: none !important;">
@@ -179,7 +189,7 @@ hello-rocm/
 <p align="center">
   <strong>⚙️ ROCm-Infrastruktur & Operatoren</strong><br>
   <em>Vom Hardware/Software-Stack bis zur HIP-Praxis</em><br>
-  📖 <strong><a href="../../03-Infra/README.md">Erste Schritte mit ROCm-Infrastruktur</a></strong>
+  📖 <strong><a href="../../docs/en/03-infra/index.md">Erste Schritte mit ROCm-Infrastruktur</a></strong>
 </p>
 
 <table align="center" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border: none !important;">
@@ -198,7 +208,7 @@ hello-rocm/
 <p align="center">
   <strong>📚 ROCm-Referenzen</strong><br>
   <em>Offizielle und Community-Ressourcen</em><br>
-  📖 <strong><a href="../../04-References/README.md">ROCm-Referenzen</a></strong>
+  📖 <strong><a href="../../docs/en/04-references/index.md">ROCm-Referenzen</a></strong>
 </p>
 
 <table align="center" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border: none !important;">
@@ -207,6 +217,8 @@ hello-rocm/
       • <a href="https://rocm.docs.amd.com/">Offizielle ROCm-Dokumentation</a><br>
       • <a href="https://github.com/amd">AMD auf GitHub</a><br>
       • <a href="https://rocm.docs.amd.com/en/latest/about/release-notes.html">ROCm-Versionshinweise</a><br>
+      • <a href="../../docs/en/04-references/index.md#amd-gpu-architecture-whitepapers">AMD GPU-Architektur-Whitepapers (CDNA / RDNA)</a><br>
+      • <a href="../../docs/en/04-references/index.md#frameworks-and-inference-services-rocm-quick-install-links">ROCm-Schnellinstallationslinks für Frameworks und Inferenzdienste</a><br>
       • Verwandte Neuigkeiten
     </td>
   </tr>
@@ -217,14 +229,14 @@ hello-rocm/
 <p align="center">
   <strong>✨ AMD-Projektvorstellungen</strong><br>
   <em>Community-getriebene Beispiele auf AMD-GPUs</em><br>
-  📖 <strong><a href="../../05-AMD-YES/README.md">Erste Schritte mit ROCm AMD-YES</a></strong>
+  📖 <strong><a href="../../docs/en/05-amd-yes/index.md">Erste Schritte mit ROCm AMD-YES</a></strong>
 </p>
 
 <table align="center" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border: none !important;">
   <tr>
     <td valign="top" width="50%" style="border: none !important;" align="center">
 • toy-cli — leichter terminalbasierter LLM-Assistent<br>
-      • WeChat „Jump Jump“ mit YOLOv10 — Game-KI-Demo<br>
+      • WeChat „Jump Jump“ mit YOLOv10 — Game-KI in Aktion (YOLOv10 unter ROCm trainieren und verwenden)<br>
       • Chat-甄嬛 — Dialogmodell im historischen Stil<br>
       • Reiseplaner — HelloAgents-Agenten-Demo<br>
       • happy-llm — verteiltes LLM-Training
@@ -243,16 +255,21 @@ hello-rocm/
 
 &emsp;&emsp;Bitte lesen Sie die **[Richtlinien](../../规范指南.md)** (Struktur, Benennung, Bilder – abgestimmt auf Tutorials wie Qwen3) und dann **[CONTRIBUTING.md](../../CONTRIBUTING.md)** (Issues, PRs und modellspezifische Verzeichniskonventionen).
 
+&emsp;&emsp;Wenn Sie bei der Nutzung von ROCm, beim Deployment von Modellen oder beim Lesen der Tutorials auf Fehlerbehebungs- oder FAQ-Fragen stoßen, können Sie auch an der **[Community-Diskussion](https://zcnijjcepfie.feishu.cn/docx/R2a4dDRUBoo1R2x7mOjcPpPPnOO)** teilnehmen, um Erfahrungen zu teilen, Probleme zu melden und die Tutorials gemeinsam mit der Community zu verbessern.
+
 &emsp;&emsp;Wenn Sie langfristig zur Pflege des Repos beitragen möchten, melden Sie sich – wir können Sie als Maintainer hinzufügen.
 
 ## Danksagungen
 
 ### Hauptbeitragende
 
-- [Zhixue Song (不要葱姜蒜) — Projektleitung](https://github.com/KMnO4-zx) (Datawhale)
-- [Yu Chen — Projektleitung](https://github.com/lucachen) (Inhalte — Google Developer Expert für Maschinelles Lernen)
-- [Jiahang Pan — Beitragender](https://github.com/amdjiahangpan) (Inhalte — AMD-Softwareentwickler)
-- [Weihong Liu — Beitragender](https://github.com/Weihong-Liu) (Datawhale)
+- [Zhixue Song (不要葱姜蒜) — Projektleitung](https://github.com/KMnO4-zx) (Datawhale-Mitglied; Projektleitung von self-llm und happy-llm)
+- [Yu Chen — Projektleitung](https://github.com/lucachen) (Content Creator; Google Developer Expert für Maschinelles Lernen)
+- [Sizhou Chen — Beitragender](https://github.com/jjyaoao) (Datawhale-Mitglied; Projektleitung von hello-agents)
+- [Jiahang Pan — Beitragender](https://github.com/amdjiahangpan) (Content Creator; AMD-Softwareentwickler)
+- [Weihong Liu — Beitragender](https://github.com/Weihong-Liu) (Datawhale-Mitglied)
+- [Dongbo Hao — Beitragender](https://github.com/wlkq151172) (Datawhale-Mitglied)
+- [Muling Ke — Beitragender](https://github.com/1985312383) (Datawhale-Mitglied)
 
 > Weitere Beitragende sind jederzeit willkommen.
 
